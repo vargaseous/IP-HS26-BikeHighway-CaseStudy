@@ -6,7 +6,9 @@
 
 
 
-# Infrastructure Planning HS2026 — MehrSpur Exercise
+# Infrastructure Planning HS2026 — Bike Highway Exercise
+
+### Anouk Presotto, Benedetta Golini, Joshua Vargas, Vincent Jonsson
 
 This repository contains the teaching material and coded reference case for ETH's Infrastructure Planning course (HS2026 | [VVZ course description](https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?lerneinheitId=206119&semkez=2026W&ansicht=LEHRVERANSTALTUNGEN&lang=de)). The **SBB MehrSpur Zürich–Winterthur** project is used to demonstrate transport modeling, analysis under uncertainty, adaptive planning and appraisal over a 40-year horizon.
 
