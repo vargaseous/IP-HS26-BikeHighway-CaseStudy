@@ -95,7 +95,7 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     # Values of passenger time (CHF/person-hour)
     # -------------------------------------------------------------------------
-    "C_TT_CAR": 42.54,  # Car travel-time value, including peak congestion delay (CHF/person-hour).
+    "C_TT_CAR": 23.3,  # Car travel-time value, including peak congestion delay (CHF/hour).
     "C_TT_PT": 26.52,  # PT in-vehicle time value (CHF/person-hour).
     "C_TT_PT_WAITING": 26.52,  # Initial and transfer waiting-time value (CHF/person-hour).
     "C_TT_PT_ACCESS": 26.52,  # PT access and egress walking/cycling time value (CHF/person-hour).
@@ -110,7 +110,7 @@ NOMINAL_PARAMS = {
     # Health rates apply to standalone cycling/walking person-km, including e-bikes.
     # The PT rate applies once per person-trip, including supplementary PT passengers.
     # Positive rates reduce societal costs; omitted rates default to zero.
-    # "BENEFIT_HEALTH_BIKE_PER_KM": 1.0,  # Cycling health benefit (CHF/person-km).
+     "BENEFIT_HEALTH_BIKE_PER_KM": 1.306,  # Cycling health benefit (CHF/person-km).
     # "BENEFIT_HEALTH_WALK_PER_KM": 1.0,  # Walking health benefit (CHF/person-km).
     # "BENEFIT_SOCIOECONOMIC_PT_PER_TRIP": 1.0,  # Additional PT benefit (CHF/person-trip).
 
@@ -131,9 +131,9 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     # Other NIBA external costs (road and passenger rail)
     # -------------------------------------------------------------------------
-    "C_NOISE_CAR": 0.01490,  # Road noise cost (CHF/vehicle-km); course NIBA coefficient.
+    "C_NOISE_CAR": 0.0116,  # Road noise cost (CHF/vehicle-km); course NIBA coefficient.
     "C_AIR_CAR": 0.01862,  # Road local air-pollution cost (CHF/vehicle-km); course NIBA coefficient.
-    "C_ACCIDENT_CAR": 0.08441,  # Road accident cost (CHF/vehicle-km); course NIBA coefficient.
+    "C_ACCIDENT_CAR": 0.078,  # Road accident cost (CHF/person-km); course NIBA coefficient.
     "C_AIR_PT": 0.00344,  # Rail local air-pollution cost (CHF/gross-tonne-km); course NIBA coefficient.
     "C_NOISE_PT": 0.00204,  # Rail noise cost (CHF/gross-tonne-km); course NIBA coefficient.
     "C_ACCIDENT_PT": 0.22210,  # Rail accident cost (CHF/train-km); course NIBA coefficient.
