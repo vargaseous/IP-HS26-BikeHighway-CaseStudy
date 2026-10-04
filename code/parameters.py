@@ -174,17 +174,17 @@ globals().update(NOMINAL_PARAMS)
 # OPTION A: Define by Municipalities / Regions (Empty when in "zones" mode)
 # -----------------------------------------------------------------------------
 CORRIDOR_REGIONS = {  # Named municipality groups defining the modeled corridor.
-    "Zürich": ["Zürich"],
-    "Winterthur": ["Winterthur"],
-    "Airport / Glattal": [
-        "Kloten", "Opfikon", "Wallisellen", "Dübendorf",
-        "Dietlikon", "Wangen-Brüttisellen", "Bassersdorf", "Rümlang",
-        "Illnau-Effretikon", "Lindau", "Nürensdorf"
-    ],
-    "Eastern Switzerland (Gateways)": [
-        "Wiesendangen", "Elsau",
-        "Elgg", "Hagenbuch"
-    ]
+    "Zürich":  [
+        "Altstetten", "Höngg", "Albisrieden", "Industriequartier",
+        "Wiedikon", "Wipkingen", "Altstadt", "Aussersihl" 
+        ],
+    "Limmattal": [ 
+        "Schlieren", "Unterengstringen", "Oberengstringen", "Dietikon",
+        "Geroldswil", "Weiningen", "Urdorf", "Oetwil an der Limmat" 
+        ],
+    "Limmattal/Aargau": [ 
+        "Killwangen", "Würenlos", "Neuenhof", "Wettingen", "Baden" 
+        ]
 }
 
 # Flat list of all corridor municipalities
