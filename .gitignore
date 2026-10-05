@@ -22,3 +22,4 @@ Thumbs.db
 
 # Cache and large artifacts
 cache/
+data/processed/mehrspur_detailed_network.pkl
