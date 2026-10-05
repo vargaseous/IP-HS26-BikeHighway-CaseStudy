@@ -174,17 +174,11 @@ globals().update(NOMINAL_PARAMS)
 # OPTION A: Define by Municipalities / Regions (Empty when in "zones" mode)
 # -----------------------------------------------------------------------------
 CORRIDOR_REGIONS = {  # Named municipality groups defining the modeled corridor.
-    "Zürich":  [
-        "Altstetten", "Höngg", "Albisrieden", "Industriequartier",
-        "Wiedikon", "Wipkingen", "Altstadt", "Aussersihl" 
-        ],
-    "Limmattal": [ 
+    "Zürich": ["Zürich"],
+    "Limmattal": [
         "Schlieren", "Unterengstringen", "Oberengstringen", "Dietikon",
-        "Geroldswil", "Weiningen", "Urdorf", "Oetwil an der Limmat" 
-        ],
-    "Limmattal/Aargau": [ 
-        "Killwangen", "Würenlos", "Neuenhof", "Wettingen", "Baden" 
-        ]
+        "Geroldswil", "Weiningen (ZH)", "Urdorf", "Oetwil an der Limmat",
+    ],
 }
 
 # Flat list of all corridor municipalities
@@ -227,41 +221,30 @@ DETAILED_NETWORK_FILE = None  # Example: "data/processed/my_project_detailed_net
 # CORRIDOR_ZONE_IDS = [z for zone_list in PROJECT_ZONES.values() for z in zone_list]
 # -----------------------------------------------------------------------------
 
-# Optional route coverage, including trips with endpoints outside the corridor.
-# Coverage is regenerated from the shared routing inputs when settings change.
-# PT approaches use service connectivity, not physical railway geometries.
-# Use `python code/additional/section_flows.py --help` for preparation/calibration.
-# Omit SECTION and EXTERNAL_FLOW for projects that do not use this feature.
+# A counting section identifies routes using an intervention, including trips
+# whose endpoints lie outside the municipal corridor. Prepare/list sections
+# with `python code/additional/section_flows.py --help`; no link IDs or new GTFS run needed.
+# Generic projects start inactive. MehrSpur explicitly enables its saved section.
 SECTION_DEFAULTS = {  # Generic fallback settings; configure the project's SECTION below.
     "active": False,                      # Enable route coverage and section-specific appraisal.
     "mode": "PT",                         # PT, CAR, BIKE or WALK
     "origin": {},                         # {"municipality_name": "X"} or {"zone_ids": [...]}
     "destination": {},                    # Destination selector for reference section travel time.
     "both_directions": True,              # Count both directions and use both reference OD directions.
-    "coverage_file": None,                # None uses an automatically regenerated cache.
+    "coverage_file": None,                # written by the section preparation command
+    "section_override": None,             # prepared name/station/pair; None uses the catalog default
     "crowding_enabled": False,            # this version values crowding only for PT
 }
 SECTION = {  # Active project section and endpoints used for its travel-time reference.
     **SECTION_DEFAULTS,
-    "active": True,                       # Include this count and its effects in model/appraisal outputs.
-    "kind": "pt_approach",                # PT station approach, cycling route or individual PT stop.
-    "station": "Winterthur",              # Station whose approach is counted.
-    "towards": "Effretikon",              # Select the side facing this station, including express services.
-    "coverage_file": "data/processed/section_coverage.npz",  # Supplied example; refreshed if inputs or definition change.
+    "active": False,                       # Include the prepared section in model/appraisal outputs.
     "mode": "PT",                         # Mode using this section; must match an enabled external flow.
     "origin": {"municipality_name": "Zürich"},  # Origin of the modeled travel-time reference.
     "destination": {"municipality_name": "Winterthur"},  # Destination of that reference.
+    "coverage_file": "data/processed/section_coverage.npz",  # Saved OD route-coverage masks.
+    "section_override": ["Effretikon", "Winterthur"],  # Prepared counting section selected from its catalog.
     "crowding_enabled": True,             # Value extra PT discomfort using the section comfort threshold.
 }
-
-# Alternative definitions (replace SECTION above; disable PT crowding for these).
-# Disable EXTERNAL_FLOW below, or calibrate a new cohort of the matching mode:
-# SECTION = {"active": True, "kind": "bike_route", "mode": "BIKE",
-#            "origin_station": "Wallisellen", "destination_station": "Dübendorf"}
-# A route reports its midpoint-link count and unique users of any project link.
-# SECTION = {"active": True, "kind": "pt_stop", "mode": "PT", "station": "Wallisellen"}
-# A stop reports access, egress and represented walking transfers separately.
-# Same-platform train changes cannot all be identified from the routing inputs.
 
 # An optional existing passenger flow, separate from modeled OD demand.
 # Mode defaults to the selected section's mode. These passengers affect
@@ -276,13 +259,12 @@ EXTERNAL_FLOW_DEFAULTS = {  # Generic fallback; configure the project's EXTERNAL
 }
 EXTERNAL_FLOW = {  # One cohort shared by baseline and projects, added after mode choice.
     **EXTERNAL_FLOW_DEFAULTS,
-    "enabled": True,                      # Include this cohort's time costs and PT comfort loading.
+    "enabled": False,                      # Include this cohort's time costs and PT comfort loading.
     "mode": "PT",                         # Existing PT passengers; must match SECTION.mode.
     # One-time nominal Stage-0 calibration (25% e-bikes; 2% road-gap target):
-    # 120,000 target - 66,891.950467 modeled passengers/day, both directions.
-    # Winterthur approach towards Effretikon; connectivity-refined road network.
+    # 120,000 observed - 65,184.591923 modeled passengers/day, both directions.
     # Keep this cohort fixed across alternatives; only general demand growth applies.
-    "additional_trips_daily": 53_108.0495332632,  # Baseline supplementary person-trips/day, both directions.
+    "additional_trips_daily": 54_815.408076911015,  # Baseline supplementary person-trips/day, both directions.
 }
 
 
@@ -358,8 +340,8 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "sensitivity",
         "transient": False,
         "distribution": "uniform",
-        "minimum": 31.91,
-        "maximum": 53.18,
+        "minimum": 17.475,
+        "maximum": 29.125,
     },
     "CO2_VALUE_CHF_PER_TONNE": {  # Draw the reference-year value once (constant 2019 CHF/tonne CO2).
         # Triangular mode is the general reference value; the engine applies
