@@ -130,60 +130,21 @@ from math import isfinite
 # =============================================================================
 PACKAGES = {
     # --- Station package ---
-    # ⚠️ STUDENT INSTRUCTION:
-    # The station and tunnel packages are SBB MehrSpur-specific examples.
-    # For your own project, replace these blocks completely with your own interventions.
-    # For example, use the "bike_highways" key (see Cheat Sheet above) to model a new cycle path.
-
-    # SBB MehrSpur station scope:
-
-    #       A3 Dietlikon: 4-track expansion & grade-separated flyover (Entflechtung),
-    #       eliminating cross-track bottlenecks towards the airport and Winterthur.
-
-    #       A4 Bassersdorf: Station modernization, portal approach tracks, and multimodal
-    #       hub integration (Velostation & P+R).
-
-    #       A5 Wallisellen: Grade-separated junction towards Zurich HB/Airport,
-    #       barrier-free platform access, and improved bus feeder connectivity.
-
-    # Transport & Economic Impact:
-    #       Relieves surface bottlenecks before tunnel completion, stabilizing network timetables.
-    #       Reduces station access/egress and physical transfer walking.
-    #       Shortens service headway and raises the section comfort threshold.
-
 
     "stations": {
-        "name": "Stage 1 – Local Stations & Access Package",
+        "name": "Stage 1 – Bike Highway Zürich-Schlieren",
 
-        # Railway improvements
-        # Section minutes follow parameters.SECTION route coverage, including
-        # through travelers. Shorter headways reduce initial and transfer waiting
-        # between different CORRIDOR_MUNICIPALITIES, in both directions.
-        "railway_expansions": [
-            {
-                "section_time_saving_min": 1.0,  # In-vehicle minutes saved relative to baseline.
-                "headway_reduction_min": 1.0,  # Minutes removed from the baseline service interval.
-                "capacity_increase": 0.10,  # Fraction of baseline peak-hour comfort capacity (+10%).
-            },
-        ],
-
-        # Hub & Node Interventions
-        "mobility_hubs": [
-            {
-                "name": "Station Upgrades (Dietlikon, Bassersdorf, Wallisellen)",
-                "zones": [
-                    {"municipality_name": "Dietlikon"},
-                    {"municipality_name": "Bassersdorf"},
-                    {"municipality_name": "Wallisellen"}
-                ],
-                "effects": {
-                    "access_time_reduction_pct": 25.0,  # Improved pedestrian ramps & bus loop access
-                    "transfer_time_reduction_pct": 15.0, # Shorter platform transfer paths
-                    # Frequency savings belong to the railway package only.
-                    "egress_time_reduction_pct": 20.0,
-                }
-            }
-        ],
+        # Bike highway improvements
+        "bike_highways": [
+                   {
+                       "area_pairs": [{"origin": {"city_quartier": "Altstetten"}, "destination": {"municipality_name": "Dietikon"}}],
+                       "both_directions": True,
+                       "effects": {
+                           "distance_reduction_pct": 5.0,
+                           "speed_increase_pct": 100 * (16 / 13 - 1)
+                       }
+                   }
+               ],
 
         # Appraisal considerations
         # CAPEX is the base construction cost, before CAPEX_MULTIPLIER.
@@ -193,7 +154,7 @@ PACKAGES = {
         # Set capital_share to 0 to disable residual valuation (lifetime may then be None).
         # No asset replacement is assumed.
         "appraisal": {
-            "capital_cost_chf": 925_000_000,  # Station-package CAPEX (CHF).
+            "capital_cost_chf": (28_422_872 + 2_681_000),  # Station-package CAPEX (CHF).
             "lifetime_years": 80,  # Service life of the share valued below (years).
             "capital_share": 0.60,  # Fraction of actual capital paid eligible for residual value.
             # Total construction emissions (tonnes CO2e), spread over construction years.
@@ -202,61 +163,25 @@ PACKAGES = {
         },
     },
 
-    # --- Tunnel package ---
-    # Core Tunnel & Winterthur Hub Package (A0 Gesamt, A1 Winterthur, A2 Tunnel)
-    #
-    # ⚠️ STUDENT INSTRUCTION:
-    # Replace this package with your own long-term or secondary interventions.
-    #
-    # SBB MehrSpur tunnel scope (opening dates are configured in adaptive_planning.py):
-    #
-    #       A0 Gesamtprojekt: System-wide technical integration,
-    #       ETCS Level 2 signaling, traction power supply, and overall project management.
-    #
-    #       A1 Winterthur: Major track layout reconfiguration at Winterthur HB,
-    #       adding grade-separated flyovers, extended platforms, and conflict-free routing.
-    #
-    #       A2 Tunnel: 8.3 km twin-tube Brüttenertunnel cutting directly between
-    #       Dietlikon/Bassersdorf and Winterthur, bypassing the curvy Effretikon bottleneck.
-    #
-    # Transport & Economic Impact:
-    #       Saves 4 minutes on covered routes and raises the comfort threshold by 15%.
-    #       Provides 17-minute service and the Winterthur hub improvements;
-    #       both packages together provide 15-minute service.
     "tunnel": {
-        "name": "Stage 2 - Tunnel & Winterthur Hub only",
+        "name": "Stage 2 - Additional underpasses",
 
         # Railway improvements: the same section and service OD scope as above.
-        "railway_expansions": [
+        "bike_highways": [
             {
-                "section_time_saving_min": 4.0,  # In-vehicle minutes saved relative to baseline.
-                "headway_reduction_min": 3.0,  # Minutes removed from the baseline service interval.
-                "capacity_increase": 0.15,  # Fraction of baseline peak-hour comfort capacity (+15%).
-            },
-        ],
-
-        # Hub & Node Interventions
-        "mobility_hubs": [
-            {
-                "name": "Winterthur Multimodal Hub (A1)",
-                "zones": [
-                    {"municipality_name": "Winterthur"}
-                ],
+                "area_pairs": [{"origin": {"city_quartier": "Altstetten"}, "destination": {"municipality_name": "Dietikon"}}],
+                "both_directions": True,
                 "effects": {
-                    "access_time_reduction_pct": 25.0,
-                    "transfer_time_reduction_pct": 15.0, # Optimized platform connections at Winterthur HB
-                    # Frequency savings belong to the railway package only.
-                    "egress_time_reduction_pct": 20.0,
-                }
-            }
+                    "speed_increase_pct": 100 * (18 / 16 - 1)
+                                       }
+            },
         ],
 
         # Appraisal considerations: the same valuation and construction conventions.
         "appraisal": {
-            "capital_cost_chf": 2_302_600_000,  # Tunnel/Winterthur package CAPEX (CHF).
+            "capital_cost_chf": 2_688_120,  # Tunnel/Winterthur package CAPEX (CHF).
             "lifetime_years": 80,  # Service life of the share valued below (years).
             "capital_share": 0.60,  # Fraction of actual capital paid eligible for residual value.
-            "construction_co2_tonnes": 300_000.0,  # Total construction emissions (tonnes CO2e).
         },
     },
 }
@@ -268,13 +193,6 @@ PACKAGES = {
 # are added to the package values: 6 minutes of section saving and 5 minutes
 # of headway reduction in total (20-minute baseline -> 15-minute service).
 COMBINED_EFFECTS = {
-    "railway_expansions": [
-        {
-            "section_time_saving_min": 1.0,
-            "headway_reduction_min": 1.0,
-            "capacity_increase": 0.05,  # Extra fraction of baseline capacity, only when both packages operate.
-        },
-    ],
     # Capacity increases are additive: +10% stations +15% tunnel +5% combined = +30% of baseline.
     # Additional physical interventions can use the same dictionaries as above:
     # "mobility_hubs": [{
@@ -491,7 +409,7 @@ def _assemble_stages(packages: dict, params: dict, service_od_pairs: list[dict],
         }
         stages[stage] = specification
     combined = deepcopy(stages[2])
-    combined["name"] = "Both stages - Tunnel and Hubs"
+    combined["name"] = "Both stages"
     combined["section_time_saving_min"] = minute_effect(3, "section_time_saving_min")
     for key in ("railway_expansions", "mobility_hubs", "bike_highways", "road_capacity"):
         if key in stages[1] or key in stages[2] or key in combined_effects:

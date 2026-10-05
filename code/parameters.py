@@ -174,17 +174,11 @@ globals().update(NOMINAL_PARAMS)
 # OPTION A: Define by Municipalities / Regions (Empty when in "zones" mode)
 # -----------------------------------------------------------------------------
 CORRIDOR_REGIONS = {  # Named municipality groups defining the modeled corridor.
-    "Zürich":  [
-        "Altstetten", "Höngg", "Albisrieden", "Industriequartier",
-        "Wiedikon", "Wipkingen", "Altstadt", "Aussersihl" 
-        ],
-    "Limmattal": [ 
+    "Zürich": ["Zürich"],
+    "Limmattal": [
         "Schlieren", "Unterengstringen", "Oberengstringen", "Dietikon",
-        "Geroldswil", "Weiningen", "Urdorf", "Oetwil an der Limmat" 
-        ],
-    "Limmattal/Aargau": [ 
-        "Killwangen", "Würenlos", "Neuenhof", "Wettingen", "Baden" 
-        ]
+        "Geroldswil", "Weiningen (ZH)", "Urdorf", "Oetwil an der Limmat",
+    ],
 }
 
 # Flat list of all corridor municipalities
@@ -243,7 +237,7 @@ SECTION_DEFAULTS = {  # Generic fallback settings; configure the project's SECTI
 }
 SECTION = {  # Active project section and endpoints used for its travel-time reference.
     **SECTION_DEFAULTS,
-    "active": True,                       # Include the prepared section in model/appraisal outputs.
+    "active": False,                       # Include the prepared section in model/appraisal outputs.
     "mode": "PT",                         # Mode using this section; must match an enabled external flow.
     "origin": {"municipality_name": "Zürich"},  # Origin of the modeled travel-time reference.
     "destination": {"municipality_name": "Winterthur"},  # Destination of that reference.
@@ -265,7 +259,7 @@ EXTERNAL_FLOW_DEFAULTS = {  # Generic fallback; configure the project's EXTERNAL
 }
 EXTERNAL_FLOW = {  # One cohort shared by baseline and projects, added after mode choice.
     **EXTERNAL_FLOW_DEFAULTS,
-    "enabled": True,                      # Include this cohort's time costs and PT comfort loading.
+    "enabled": False,                      # Include this cohort's time costs and PT comfort loading.
     "mode": "PT",                         # Existing PT passengers; must match SECTION.mode.
     # One-time nominal Stage-0 calibration (25% e-bikes; 2% road-gap target):
     # 120,000 observed - 65,184.591923 modeled passengers/day, both directions.
@@ -346,8 +340,8 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "sensitivity",
         "transient": False,
         "distribution": "uniform",
-        "minimum": 31.91,
-        "maximum": 53.18,
+        "minimum": 17.475,
+        "maximum": 29.125,
     },
     "CO2_VALUE_CHF_PER_TONNE": {  # Draw the reference-year value once (constant 2019 CHF/tonne CO2).
         # Triangular mode is the general reference value; the engine applies
