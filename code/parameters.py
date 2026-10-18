@@ -55,7 +55,7 @@ NOMINAL_PARAMS = {
     "BIKE_ASC_SHIFT_Y40": 0.20,  # Optional nominal final cycling preference shift (utility units).
     "EBIKE_SHARE": 0.25,  # Baseline e-bike fraction of cycling and PT bicycle access/egress trips (0 to 1).
     "EBIKE_SHARE_Y40": 0.50,  # Nominal final e-bike share.
-    "EBIKE_SPEED_MULTIPLIER": 1.5,  # E-bike speed divided by conventional-bike speed; 1.5 means 50% faster.
+    "EBIKE_SPEED_MULTIPLIER": 1.54658,  # E-bike speed divided by conventional-bike speed; 1.5 means 50% faster.
     "ROAD_FREIGHT_GROWTH": 0.0,  # Growth in prepared commercial/freight vehicles and their synthetic uplift.
     "ROAD_FREIGHT_GROWTH_Y40": 0.10,  # Nominal final growth of prepared background road vehicles.
 
@@ -95,15 +95,15 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     # Values of passenger time (CHF/person-hour)
     # -------------------------------------------------------------------------
-    "C_TT_CAR": 23.3,  # Car travel-time value, including peak congestion delay (CHF/hour).
+    "C_TT_CAR": 42.54,  # Car travel-time value, including peak congestion delay (CHF/person-hour).
     "C_TT_PT": 26.52,  # PT in-vehicle time value (CHF/person-hour).
     "C_TT_PT_WAITING": 26.52,  # Initial and transfer waiting-time value (CHF/person-hour).
     "C_TT_PT_ACCESS": 26.52,  # PT access and egress walking/cycling time value (CHF/person-hour).
     "C_TT_PT_TRANSFER": 26.52,  # Physical transfer-walking time value (CHF/person-hour); excludes waiting.
     # Active-mode time is valued per person-hour, like PT/car passenger time.
-        "C_TT_BIKE": 35.0,  # Cycling value of time (CHF/person-hour)
+    "C_TT_BIKE": 35.0,  # Cycling value of time (CHF/person-hour)
     "C_TT_WALK": 16.0,  # Walking value of time (CHF/person-hour)
-
+    "C_TT_BIKE_LANE": 24.5 # Cycling value of time on a separated bike lane (CHF/person-hour); 34% lower than cycling on a shared road; new
     # -------------------------------------------------------------------------
     # Optional additional benefits (uncomment to include in appraisal)
     # -------------------------------------------------------------------------
@@ -133,7 +133,7 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     "C_NOISE_CAR": 0.0116,  # Road noise cost (CHF/vehicle-km); course NIBA coefficient.
     "C_AIR_CAR": 0.01862,  # Road local air-pollution cost (CHF/vehicle-km); course NIBA coefficient.
-    "C_ACCIDENT_CAR": 0.078,  # Road accident cost (CHF/person-km); course NIBA coefficient.
+    "C_ACCIDENT_CAR": 0.084441,  # Road accident cost (CHF/vehicle-km); course NIBA coefficient.
     "C_AIR_PT": 0.00344,  # Rail local air-pollution cost (CHF/gross-tonne-km); course NIBA coefficient.
     "C_NOISE_PT": 0.00204,  # Rail noise cost (CHF/gross-tonne-km); course NIBA coefficient.
     "C_ACCIDENT_PT": 0.22210,  # Rail accident cost (CHF/train-km); course NIBA coefficient.
@@ -141,7 +141,9 @@ NOMINAL_PARAMS = {
     "ACCIDENT_COST_MULTIPLIER_Y40": 0.85,  # Nominal final accident-cost factor; 0.85 means 15% lower unit costs.
     "LOCAL_AIR_COST_MULTIPLIER": 1.0,  # Multiplier on road and rail local air-pollution unit costs.
     "LOCAL_AIR_COST_MULTIPLIER_Y40": 0.65,  # Nominal final local air-pollution cost factor.
-
+    "C_ACCIDENt_BIKE": 0.39 #Road accident cost for cycling (CHF/person-km); new
+    "C_ACCIDENT_BIKE_LANE": 0.25 #Road accident cost for cycling on a separate lane (CHF/person-km); new
+    
     # -------------------------------------------------------------------------
     # Shared operation, investment multipliers and flexibility options
     # -------------------------------------------------------------------------
@@ -300,39 +302,39 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "scenarios",
         "transient": True,
         "distribution": "triangular",
-        "minimum": 0.173,
-        "maximum": 0.0,
+        "minimum": -0.20,
+        "maximum": 0.50,
     },
     "PT_ASC_SHIFT": {  # Final additive PT preference shift; negative values reduce PT attractiveness.
         "category": "transport_modelling",
         "use": "scenarios",
         "transient": True,
         "distribution": "triangular",
-        "minimum": -0.035,
-        "maximum": 0.163,
+        "minimum": -0.10,
+        "maximum": 0.30,
     },
     "BIKE_ASC_SHIFT": {  # Cycling preference; uncommented together with BIKE_ASC_SHIFT_Y40 above.
          "category": "transport_modelling",
          "use": "scenarios",
          "transient": True,
          "distribution": "triangular",
-         "minimum": -0.558,
-         "maximum": -0.241,
+         "minimum": -0.50,
+         "maximum": 1.00,
      },
     "EBIKE_SHARE": {
         "category": "transport_modelling",
         "use": "scenarios",
         "transient": True,
         "distribution": "triangular",
-        "minimum": 0.23,
-        "maximum": 0.72,
+        "minimum": 0.35,
+        "maximum": 0.80,
     }, # type: ignore
     "ROAD_FREIGHT_GROWTH": {  # Final prepared-background growth; sigma is in growth-fraction units.
         "category": "transport_modelling",
         "use": "scenarios",
         "transient": True,
         "distribution": "normal",
-        "sigma": 0.163,
+        "sigma": 0.05,
     },
     "C_TT_PT": {  # PT value-of-time sensitivity; one CHF/person-hour draw for the whole horizon.
         "category": "post_modelling",
