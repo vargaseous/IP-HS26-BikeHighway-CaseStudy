@@ -11,7 +11,7 @@
     },
     "points_added": 0,
     "final_holdout_metrics": {
-      "weighted_rmse_min": 8.653181517350484
+      "weighted_rmse_min": 8.462836263630034
     },
     "target_reached": false
   },
@@ -1580,7 +1580,7 @@
   ],
   "cache_contract": {
     "format_version": 3,
-    "model_fingerprint": "28ba0c10952b682b1422",
+    "model_fingerprint": "073e1b292fbd34bf0be0",
     "reference_equations": "19783b770214fd1a0541",
     "solver_settings": {
       "stopping_rule": "road_relative_gap",
@@ -1979,12 +1979,12 @@
       "0": {
         "section_time_saving_min": 0.0,
         "ebike_share": 0.25,
-        "EBIKE_SPEED_MULTIPLIER": 1.5
+        "EBIKE_SPEED_MULTIPLIER": 1.54658
       },
       "1": {
         "section_time_saving_min": 0.0,
         "ebike_share": 0.25,
-        "EBIKE_SPEED_MULTIPLIER": 1.5,
+        "EBIKE_SPEED_MULTIPLIER": 1.54658,
         "bike_highways": [
           {
             "area_pairs": [
@@ -2313,7 +2313,7 @@
       "2": {
         "section_time_saving_min": 0.0,
         "ebike_share": 0.25,
-        "EBIKE_SPEED_MULTIPLIER": 1.5,
+        "EBIKE_SPEED_MULTIPLIER": 1.54658,
         "bike_highways": [
           {
             "area_pairs": [
@@ -2641,7 +2641,7 @@
       "3": {
         "section_time_saving_min": 0.0,
         "ebike_share": 0.25,
-        "EBIKE_SPEED_MULTIPLIER": 1.5,
+        "EBIKE_SPEED_MULTIPLIER": 1.54658,
         "bike_highways": [
           {
             "area_pairs": [
@@ -3020,7 +3020,7 @@
     "drive_occupancy": 1.14,
     "prepared_inputs": {
       "data/transport/config/mode_choice.json": "b099f6dbfe7c3f2b0f72868ccb0598a0a4b7653ea34cf37a85e1ad1111f13d85",
-      "cache/tmi_context.pkl": "4c1c937039567c8373c7251bec4b18da22ea7882db5f245c4c9b30aed52f7037",
+      "cache/tmi_context.pkl": "0c83d5e840b655f539c4a12b422d6b0c4e42fadcd3df70fb29e724e22e6f3d68",
       "data/processed/mehrspur_detailed_network.pkl": "3e9d43ea89d8651af17f20f628441b9bf7304ca314bea250c8945a20bfe0715c"
     },
     "reference_equations": {
@@ -3182,7 +3182,7 @@
     "code/additional/transport_display.py": "45aa0a30f5e8a1f52d9aaddbe44a974c8e7db2efb6d44d3f98a962d7f71fe8fb",
     "code/additional/trigger_optimization.py": "18fd8b4300761ee47476fe47a22997badda310de88cb47b9d05cce6e9a3f5135",
     "code/additional/uncertainty.py": "c4e276867e04948dbd5adcab14a653106bb729ae8a8e3dfe7c6161c34303dfdc",
-    "code/parameters.py": "12d244abc7f5335850ada4e27d299e8f9a842562be2dba9fb8fb527f13cb0746",
+    "code/parameters.py": "a49533d817cb5f55444573407f8288dfe8f7404f328c3eb4aa6d322d17c0d92d",
     "code/simulation_engine.py": "72b0f369364272978048a5fa3ddabab7c47355766ffffe7ec6c7b00cef844a8e",
     "code/stages.py": "874e091cdb2f74b50b1f782b2197275320d9b07d0ce0f2f31ea96e2a6387c1f9",
     "code/surrogate_model/__init__.py": "e14f9360129c8a8d333cee6c7b17230d83b71c55fd9c2e467149a28a44948039",
@@ -3213,7 +3213,7 @@
     "code/additional/transport_display.py": "45aa0a30f5e8a1f52d9aaddbe44a974c8e7db2efb6d44d3f98a962d7f71fe8fb",
     "code/additional/trigger_optimization.py": "18fd8b4300761ee47476fe47a22997badda310de88cb47b9d05cce6e9a3f5135",
     "code/additional/uncertainty.py": "c4e276867e04948dbd5adcab14a653106bb729ae8a8e3dfe7c6161c34303dfdc",
-    "code/parameters.py": "12d244abc7f5335850ada4e27d299e8f9a842562be2dba9fb8fb527f13cb0746",
+    "code/parameters.py": "a49533d817cb5f55444573407f8288dfe8f7404f328c3eb4aa6d322d17c0d92d",
     "code/simulation_engine.py": "72b0f369364272978048a5fa3ddabab7c47355766ffffe7ec6c7b00cef844a8e",
     "code/stages.py": "874e091cdb2f74b50b1f782b2197275320d9b07d0ce0f2f31ea96e2a6387c1f9",
     "code/surrogate_model/__init__.py": "e14f9360129c8a8d333cee6c7b17230d83b71c55fd9c2e467149a28a44948039",

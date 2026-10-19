@@ -103,7 +103,7 @@ NOMINAL_PARAMS = {
     # Active-mode time is valued per person-hour, like PT/car passenger time.
     "C_TT_BIKE": 35.0,  # Cycling value of time (CHF/person-hour)
     "C_TT_WALK": 16.0,  # Walking value of time (CHF/person-hour)
-    "C_TT_BIKE_LANE": 24.5 # Cycling value of time on a separated bike lane (CHF/person-hour); 34% lower than cycling on a shared road; new
+    "C_TT_BIKE_LANE": 24.5, # Cycling value of time on a separated bike lane (CHF/person-hour); 34% lower than cycling on a shared road; new
     # -------------------------------------------------------------------------
     # Optional additional benefits (uncomment to include in appraisal)
     # -------------------------------------------------------------------------
@@ -141,8 +141,8 @@ NOMINAL_PARAMS = {
     "ACCIDENT_COST_MULTIPLIER_Y40": 0.85,  # Nominal final accident-cost factor; 0.85 means 15% lower unit costs.
     "LOCAL_AIR_COST_MULTIPLIER": 1.0,  # Multiplier on road and rail local air-pollution unit costs.
     "LOCAL_AIR_COST_MULTIPLIER_Y40": 0.65,  # Nominal final local air-pollution cost factor.
-    "C_ACCIDENt_BIKE": 0.39 #Road accident cost for cycling (CHF/person-km); new
-    "C_ACCIDENT_BIKE_LANE": 0.25 #Road accident cost for cycling on a separate lane (CHF/person-km); new
+    "C_ACCIDENt_BIKE": 0.39, #Road accident cost for cycling (CHF/person-km); new
+    "C_ACCIDENT_BIKE_LANE": 0.25, #Road accident cost for cycling on a separate lane (CHF/person-km); new
     
     # -------------------------------------------------------------------------
     # Shared operation, investment multipliers and flexibility options
@@ -349,8 +349,8 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "sensitivity",
         "transient": False,
         "distribution": "uniform",
-        "minimum": 17.475,
-        "maximum": 29.125,
+        "minimum": 31.91,
+        "maximum": 53.18,
     },
     "CO2_VALUE_CHF_PER_TONNE": {  # Draw the reference-year value once (constant 2019 CHF/tonne CO2).
         # Triangular mode is the general reference value; the engine applies
