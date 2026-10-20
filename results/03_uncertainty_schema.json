@@ -1,7 +1,7 @@
 {
-  "surrogate_fingerprint": "073e1b292fbd34bf0be0",
-  "surrogate_artifact_sha256": "b3cc37d44ecb1cdbc073e694eaf74cc7e4ed46214de031ac4b527d8b48ef32d5",
-  "response_table_fingerprint": "c5aae5b9f6c5b6d2a0d8",
+  "surrogate_fingerprint": "1302ad8bd37cda4f789b",
+  "surrogate_artifact_sha256": "f108f6e7010f5c7e1873a34bacf7e6d94f97ecef9c81f16ee137a27c347d70a8",
+  "response_table_fingerprint": "4ccfdc638f6c13aa20f1",
   "surrogate_format_version": 3,
   "transport_uncertainties": [
     "PASSENGER_DEMAND_GROWTH",
@@ -31,8 +31,8 @@
   ],
   "physical_domain": {
     "PASSENGER_DEMAND_GROWTH": {
-      "minimum": -0.2,
-      "maximum": 0.5,
+      "minimum": 0.0,
+      "maximum": 0.251,
       "nominal": 0.0
     },
     "PT_ASC_SHIFT": {
@@ -46,8 +46,8 @@
       "nominal": 0.0
     },
     "EBIKE_SHARE": {
-      "minimum": 0.25,
-      "maximum": 0.8,
+      "minimum": 0.23,
+      "maximum": 0.72,
       "nominal": 0.25
     },
     "ROAD_FREIGHT_GROWTH": {
