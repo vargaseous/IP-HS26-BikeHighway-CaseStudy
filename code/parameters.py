@@ -247,13 +247,13 @@ SECTION_DEFAULTS = {  # Generic fallback settings; configure the project's SECTI
 }
 SECTION = {  # Active project section and endpoints used for its travel-time reference.
     **SECTION_DEFAULTS,
-    "active": True,                        # Include the prepared section in model/appraisal outputs.
+    "active": False,                        # Include the prepared section in model/appraisal outputs.
     "mode": "PT",                         # Mode using this section; must match an enabled external flow.
     "origin": {"municipality_name": "Zürich"},  # Origin of the modeled travel-time reference.
     "destination": {"municipality_name": "Winterthur"},  # Destination of that reference.
     "coverage_file": "data/processed/section_coverage.npz",  # Saved OD route-coverage masks.
     "section_override": ["Effretikon", "Winterthur"],  # Prepared counting section selected from its catalog.
-    "crowding_enabled": True,             # Value extra PT discomfort using the section comfort threshold.
+    "crowding_enabled": False,             # Value extra PT discomfort using the section comfort threshold.
 }
 
 # An optional existing passenger flow, separate from modeled OD demand.
@@ -274,7 +274,7 @@ EXTERNAL_FLOW = {  # One cohort shared by baseline and projects, added after mod
     # One-time nominal Stage-0 calibration (25% e-bikes; 2% road-gap target):
     # 120,000 observed - 65,184.591923 modeled passengers/day, both directions.
     # Keep this cohort fixed across alternatives; only general demand growth applies.
-    "additional_trips_daily": 54_815.408076911015,  # Baseline supplementary person-trips/day, both directions.
+    "additional_trips_daily": 0.0,  # Baseline supplementary person-trips/day, both directions.
 }
 
 
