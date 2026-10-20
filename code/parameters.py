@@ -52,10 +52,10 @@ NOMINAL_PARAMS = {
     "PT_ASC_SHIFT": 0.0,  # Additive preference shift for both PT access modes (utility units, not percent).
     "PT_ASC_SHIFT_Y40": 0.10,  # Nominal final PT preference shift (utility units).
     "BIKE_ASC_SHIFT": 0.0,  # Additive preference shift for standalone cycling (utility units).
-    # "BIKE_ASC_SHIFT_Y40": 0.20,  # Optional nominal final cycling preference shift (utility units).
+    "BIKE_ASC_SHIFT_Y40": 0.20,  # Optional nominal final cycling preference shift (utility units).
     "EBIKE_SHARE": 0.25,  # Baseline e-bike fraction of cycling and PT bicycle access/egress trips (0 to 1).
     "EBIKE_SHARE_Y40": 0.50,  # Nominal final e-bike share.
-    "EBIKE_SPEED_MULTIPLIER": 1.5,  # E-bike speed divided by conventional-bike speed; 1.5 means 50% faster.
+    "EBIKE_SPEED_MULTIPLIER": 1.54658,  # E-bike speed divided by conventional-bike speed; 1.5 means 50% faster.
     "ROAD_FREIGHT_GROWTH": 0.0,  # Growth in prepared commercial/freight vehicles and their synthetic uplift.
     "ROAD_FREIGHT_GROWTH_Y40": 0.10,  # Nominal final growth of prepared background road vehicles.
 
@@ -95,15 +95,15 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     # Values of passenger time (CHF/person-hour)
     # -------------------------------------------------------------------------
-    "C_TT_CAR": 23.3,  # Car travel-time value, including peak congestion delay (CHF/hour).
+    "C_TT_CAR": 42.54,  # Car travel-time value, including peak congestion delay (CHF/person-hour).
     "C_TT_PT": 26.52,  # PT in-vehicle time value (CHF/person-hour).
     "C_TT_PT_WAITING": 26.52,  # Initial and transfer waiting-time value (CHF/person-hour).
     "C_TT_PT_ACCESS": 26.52,  # PT access and egress walking/cycling time value (CHF/person-hour).
     "C_TT_PT_TRANSFER": 26.52,  # Physical transfer-walking time value (CHF/person-hour); excludes waiting.
     # Active-mode time is valued per person-hour, like PT/car passenger time.
-        "C_TT_BIKE": 35.0,  # Cycling value of time (CHF/person-hour)
+    "C_TT_BIKE": 35.0,  # Cycling value of time (CHF/person-hour)
     "C_TT_WALK": 16.0,  # Walking value of time (CHF/person-hour)
-
+    "C_TT_BIKE_LANE": 24.5, # Cycling value of time on a separated bike lane (CHF/person-hour); 34% lower than cycling on a shared road; new
     # -------------------------------------------------------------------------
     # Optional additional benefits (uncomment to include in appraisal)
     # -------------------------------------------------------------------------
@@ -133,7 +133,7 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     "C_NOISE_CAR": 0.0116,  # Road noise cost (CHF/vehicle-km); course NIBA coefficient.
     "C_AIR_CAR": 0.01862,  # Road local air-pollution cost (CHF/vehicle-km); course NIBA coefficient.
-    "C_ACCIDENT_CAR": 0.078,  # Road accident cost (CHF/person-km); course NIBA coefficient.
+    "C_ACCIDENT_CAR": 0.084441,  # Road accident cost (CHF/vehicle-km); course NIBA coefficient.
     "C_AIR_PT": 0.00344,  # Rail local air-pollution cost (CHF/gross-tonne-km); course NIBA coefficient.
     "C_NOISE_PT": 0.00204,  # Rail noise cost (CHF/gross-tonne-km); course NIBA coefficient.
     "C_ACCIDENT_PT": 0.22210,  # Rail accident cost (CHF/train-km); course NIBA coefficient.
@@ -141,7 +141,9 @@ NOMINAL_PARAMS = {
     "ACCIDENT_COST_MULTIPLIER_Y40": 0.85,  # Nominal final accident-cost factor; 0.85 means 15% lower unit costs.
     "LOCAL_AIR_COST_MULTIPLIER": 1.0,  # Multiplier on road and rail local air-pollution unit costs.
     "LOCAL_AIR_COST_MULTIPLIER_Y40": 0.65,  # Nominal final local air-pollution cost factor.
-
+    "C_ACCIDENt_BIKE": 0.39, #Road accident cost for cycling (CHF/person-km); new
+    "C_ACCIDENT_BIKE_LANE": 0.25, #Road accident cost for cycling on a separate lane (CHF/person-km); new
+    
     # -------------------------------------------------------------------------
     # Shared operation, investment multipliers and flexibility options
     # -------------------------------------------------------------------------
@@ -195,38 +197,38 @@ DETAILED_NETWORK_FILE = None  # Example: "data/processed/my_project_detailed_net
 # OPTION B: Define by Explicit Zone IDs
 # -----------------------------------------------------------------------------
 # Example: enable zone selection, define groups, then flatten their IDs.
-# CORRIDOR_DEFINITION_MODE = "zones"
-#PROJECT_ZONES = {
+CORRIDOR_DEFINITION_MODE = "zones"
+PROJECT_ZONES = {
     # Included Municipalities: "Geroldswil", "Weiningen", "Unterengstringen", "Oberengstringen", "Urdorf", "Oetwil an der Limmat", "Dietikon", "Schlieren", "Altstetten", 
     #                             "Höngg", "Albisrieden", "Aussersihl", "Wiedikon", "Altstadt", "Wipkingen", "Industriequartier"
-#   "Zurich_S18_Alignment": [ 
-#       "24301001", "24301002", "24301003", "24301004", "24301005", "24301006", "24301007", "24301008", "24301009", "24301010", 
-#       "24301011", "24301012", "24301013", "24301014", "24301015", "24301016", "24301017", "24301018", "24301019", "24301020", 
-#       "24301021", "24301022", "24301023", "24301024", "24301025", "24301026", "24301027", "24401001", "24401002", "24401003", 
-#       "24401004", "24401005", "24501001", "24501002", "24501003", "24501004", "24601001", "24601002", "24701001", "24701002", 
-#       "24701003", "24701004", "24701005", "24701006", "24701007", "24701008", "24701009", "24701010", "24701011", "24701012", 
-#       "24701013", "24701014", "24701015", "24701016", "24701017", "24701018", "24701019", "24701020", "24901001", "24901002", 
-#       "24901003", "25001001", "25001002", "25001003", "25001004", "25001005", "25001006", "25001007", "25001008", "25001009", 
-#       "25101001", "25101002", "25101003", "25101004", "25101005", "26101001", "26101002", "26101003", "26101004", "26101005", 
-#       "26101006", "26101007", "26101008", "26101009", "26101010", "26101011", "26101012", "26101013", "26101014", "26101015", 
-#       "26101016", "26101017", "26101018", "26101019", "26101020", "26101021", "26101022", "26101023", "26101024", "26101025", 
-#       "26101026", "26101027", "26101028", "26101029", "26101030", "26101031", "26101032", "26101033", "26101034", "26101035", 
-#       "26101036", "26101037", "26101040", "26101041", "26101042", "26101043", "26101045", "26101046", "26101047", "26101050", 
-#       "26101051", "26101052", "26101054", "26101055", "26101057", "26101058", "26101060", "26101061", "26101063", "26101064", 
-#       "26101066", "26101068", "26101075", "26101076", "26101077", "26101083", "26101084", "26101086", "26101088", "26101092", 
-#       "26101093", "26101094", "26101095", "26101096", "26101099", "26101100", "26101101", "26101102", "26101103", "26101105", 
-#       "26101106", "26101107", "26101108", "26101109", "26101110", "26101111", "26101113", "26101114", "26101115", "26101116", 
-#       "26101117", "26101118", "26101119", "26101120", "26101121", "26101123", "26101124", "26101125", "26101127", "26101129", 
-#       "26101130", "26101131", "26101133", "26101134", "26101136", "26101142", "26101143", "26101144", "26101146", "26101147", 
-#       "26101148", "26101149", "26101151", "26101153", "26101154", "26101156", "26101160", "26101163", "26101169", "26101171", 
-#       "26101173", "26101174", "26101180", "26101181", "26101183", "26101185", "26101189", "26101190", "26101194", "26101195", 
-#       "26101198", "26101199", "26101201", "26101202", "26101210", "26101216", "26101218", "26101220", "26101221", "26101222", 
-#       "26101227", "26101229", "26101235", "26101236", "26103306"
-#     ]
+    "Zurich_S18_Alignment": [ 
+    "24301001", "24301002", "24301003", "24301004", "24301005", "24301006", "24301007", "24301008", "24301009", "24301010", 
+    "24301011", "24301012", "24301013", "24301014", "24301015", "24301016", "24301017", "24301018", "24301019", "24301020", 
+    "24301021", "24301022", "24301023", "24301024", "24301025", "24301026", "24301027", "24401001", "24401002", "24401003", 
+    "24401004", "24401005", "24501001", "24501002", "24501003", "24501004", "24601001", "24601002", "24701001", "24701002", 
+    "24701003", "24701004", "24701005", "24701006", "24701007", "24701008", "24701009", "24701010", "24701011", "24701012", 
+    "24701013", "24701014", "24701015", "24701016", "24701017", "24701018", "24701019", "24701020", "24901001", "24901002", 
+    "24901003", "25001001", "25001002", "25001003", "25001004", "25001005", "25001006", "25001007", "25001008", "25001009", 
+    "25101001", "25101002", "25101003", "25101004", "26101001", "26101002", "26101003", "26101004", "26101005", 
+    "26101006", "26101007", "26101008", "26101009", "26101010", "26101011", "26101012", "26101013", "26101014", "26101015", 
+    "26101016", "26101017", "26101018", "26101019", "26101020", "26101021", "26101022", "26101023", "26101024", "26101025", 
+    "26101026", "26101027", "26101028", "26101029", "26101030", "26101031", "26101032", "26101033", "26101034", "26101035", 
+    "26101036", "26101037", "26101040", "26101041", "26101042", "26101043", "26101045", "26101046", "26101047", "26101050", 
+    "26101051", "26101052", "26101054", "26101055", "26101057", "26101058", "26101060", "26101061", "26101063", "26101064", 
+    "26101066", "26101068", "26101075", "26101076", "26101077", "26101083", "26101084", "26101086", "26101088", "26101092", 
+    "26101093", "26101094", "26101095", "26101096", "26101099", "26101100", "26101101", "26101102", "26101103", "26101105", 
+    "26101106", "26101107", "26101108", "26101109", "26101110", "26101111", "26101113", "26101114", "26101115", "26101116", 
+    "26101117", "26101118", "26101119", "26101120", "26101121", "26101123", "26101124", "26101125", "26101127", "26101129", 
+    "26101130", "26101131", "26101133", "26101134", "26101136", "26101142", "26101143", "26101144", "26101146", "26101147", 
+    "26101148", "26101149", "26101151", "26101153", "26101154", "26101156", "26101160", "26101163", "26101169", "26101171", 
+    "26101173", "26101174", "26101180", "26101181", "26101183", "26101185", "26101189", "26101190", "26101194", "26101195", 
+    "26101198", "26101199", "26101201", "26101202", "26101210", "26101216", "26101218", "26101220", "26101221", "26101222", 
+    "26101227", "26101229", "26101235", "26101236", "26103306"
+    ]
 
-# }
+}
 # Flat list of active corridor zone IDs:
-# CORRIDOR_ZONE_IDS = [z for zone_list in PROJECT_ZONES.values() for z in zone_list]
+CORRIDOR_ZONE_IDS = [z for zone_list in PROJECT_ZONES.values() for z in zone_list]
 # -----------------------------------------------------------------------------
 
 # A counting section identifies routes using an intervention, including trips
@@ -245,7 +247,7 @@ SECTION_DEFAULTS = {  # Generic fallback settings; configure the project's SECTI
 }
 SECTION = {  # Active project section and endpoints used for its travel-time reference.
     **SECTION_DEFAULTS,
-    "active": False,                       # Include the prepared section in model/appraisal outputs.
+    "active": True,                        # Include the prepared section in model/appraisal outputs.
     "mode": "PT",                         # Mode using this section; must match an enabled external flow.
     "origin": {"municipality_name": "Zürich"},  # Origin of the modeled travel-time reference.
     "destination": {"municipality_name": "Winterthur"},  # Destination of that reference.
@@ -311,23 +313,22 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "minimum": -0.10,
         "maximum": 0.30,
     },
-    # Uncomment together with BIKE_ASC_SHIFT_Y40 above to include cycling preferences.
-    # "BIKE_ASC_SHIFT": {
-    #     "category": "transport_modelling",
-    #     "use": "scenarios",
-    #     "transient": True,
-    #     "distribution": "triangular",
-    #     "minimum": -0.50,
-    #     "maximum": 1.00,
-    # },
-    "EBIKE_SHARE": {  # Final e-bike fraction; starts from the known baseline share.
+    "BIKE_ASC_SHIFT": {  # Cycling preference; uncommented together with BIKE_ASC_SHIFT_Y40 above.
+         "category": "transport_modelling",
+         "use": "scenarios",
+         "transient": True,
+         "distribution": "triangular",
+         "minimum": -0.50,
+         "maximum": 1.00,
+     },
+    "EBIKE_SHARE": {
         "category": "transport_modelling",
         "use": "scenarios",
         "transient": True,
         "distribution": "triangular",
         "minimum": 0.35,
         "maximum": 0.80,
-    },
+    }, # type: ignore
     "ROAD_FREIGHT_GROWTH": {  # Final prepared-background growth; sigma is in growth-fraction units.
         "category": "transport_modelling",
         "use": "scenarios",
@@ -348,8 +349,8 @@ STRUCTURAL_UNCERTAINTIES = {  # Distributions for selected general parameters; n
         "use": "sensitivity",
         "transient": False,
         "distribution": "uniform",
-        "minimum": 17.475,
-        "maximum": 29.125,
+        "minimum": 31.91,
+        "maximum": 53.18,
     },
     "CO2_VALUE_CHF_PER_TONNE": {  # Draw the reference-year value once (constant 2019 CHF/tonne CO2).
         # Triangular mode is the general reference value; the engine applies

@@ -37,3 +37,7 @@ validation/
 # Generated Notebook 03 exports
 /figures/03_uncertainty_modeling/
 /results/03_uncertainty_modeling/
+pyproject.toml
+src/ip_hs26_bikehighway_casestudy/__init__.py
+uv.lock
+.python-version
