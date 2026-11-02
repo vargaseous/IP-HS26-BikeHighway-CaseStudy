@@ -228,7 +228,7 @@ COMBINED_EFFECTS = {
 # INTERNAL ASSEMBLY AND APPRAISAL HELPERS (normally leave unchanged)
 # =============================================================================
 STATE_IDS = (0, 1, 2, 3)
-STATE_LABELS = {0: "Baseline", 1: "Stations only", 2: "Tunnel only", 3: "Stations + tunnel"}
+STATE_LABELS = {0: "Baseline", 1: "Bike highway", 2: "Underpasses", 3: "Bike highway + Underpasses"}
 STATE_COLORS = {0: "#9E9E9E", 1: "#FFC107", 2: "#2196F3", 3: "#4CAF50"}
 _STATE_COMPONENTS = {0: (False, False), 1: (True, False), 2: (False, True), 3: (True, True)}
 

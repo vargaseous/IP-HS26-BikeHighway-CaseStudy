@@ -1,0 +1,5 @@
+﻿requirement,failure_percent,mean_failure_years,configuration
+Cycling trip share > 20 % (Years 20–40),72.5,10.42,Stage 0 – Baseline Network
+Cycling trip share > 20 % (Years 20–40),72.0,10.4,Stage 1 – Bike Highway Zürich-Schlieren
+Cycling trip share > 20 % (Years 20–40),72.0,10.42,Stage 2 - Additional underpasses
+Cycling trip share > 20 % (Years 20–40),72.0,10.38,Both stages

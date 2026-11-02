@@ -141,7 +141,7 @@ NOMINAL_PARAMS = {
     "ACCIDENT_COST_MULTIPLIER_Y40": 0.85,  # Nominal final accident-cost factor; 0.85 means 15% lower unit costs.
     "LOCAL_AIR_COST_MULTIPLIER": 1.0,  # Multiplier on road and rail local air-pollution unit costs.
     "LOCAL_AIR_COST_MULTIPLIER_Y40": 0.65,  # Nominal final local air-pollution cost factor.
-    "C_ACCIDENt_BIKE": 0.39, #Road accident cost for cycling (CHF/person-km); new
+    "C_ACCIDENT_BIKE": 0.39, #Road accident cost for cycling (CHF/person-km); new
     "C_ACCIDENT_BIKE_LANE": 0.25, #Road accident cost for cycling on a separate lane (CHF/person-km); new
     
     # -------------------------------------------------------------------------
@@ -152,13 +152,13 @@ NOMINAL_PARAMS = {
     "OPEX_MULTIPLIER": 1.0,  # Multiplier on annual infrastructure operating/maintenance costs.
     "CAPEX_MULTIPLIER": 1.0,  # Multiplier on construction costs and upfront option premiums.
     # Flexibility Premium (for pre-engineering or reservation)
-    "C_FLEX": 50_000_000,  # Upfront CHF per adaptive package; two options are paid at time zero even if unused.
+    "C_FLEX": 1_000_000,  # Group comment: we lowered this to be proportional to the original MehrSpur project; C_FLEX's original value was around 3% of the original Stage 1 CPAEX and 1% of Stage 1 + Stage 2 CAPEX, leading to a ballpark of 0.3-1M. We chose to go with the upper end to reflect non-scalable costs such as pre-engineering and project management
 
     # -------------------------------------------------------------------------
     # Performance requirements and strategic mode-share indicators
     # -------------------------------------------------------------------------
     "MAX_AVG_TT": 15.0,  # Acceptability ceiling for peak car/PT in-vehicle time plus car delay (min/trip).
-    "PT_SHARE_TARGET": 0.35,  # Teaching minimum for PT share of strategic passenger-km; baseline is about 31.9%.
+    "PT_SHARE_TARGET": 0.47,  # Teaching minimum for PT share of strategic passenger-km; baseline is about 31.9%.
     "MIN_STRATEGIC_PKM_DISTANCE": 5.0,  # Minimum OD distance for strategic mode-share indicators (km); not an appraisal cutoff.
 
     # Internal shared keys for appraisal and uncertainties; edit values in stages.py.

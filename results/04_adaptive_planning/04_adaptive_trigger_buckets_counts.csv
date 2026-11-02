@@ -1,0 +1,9 @@
+﻿package,opening_cohort,n,percent
+Stage 1,No opening,76,38.0
+Stage 1,Early opening (≤ Y15),0,0.0
+Stage 1,Medium opening (Y16–Y25),15,7.5
+Stage 1,Late opening (> Y25),109,54.5
+Stage 2,No opening,143,71.5
+Stage 2,Early opening (≤ Y15),0,0.0
+Stage 2,Medium opening (Y16–Y25),0,0.0
+Stage 2,Late opening (> Y25),57,28.5
