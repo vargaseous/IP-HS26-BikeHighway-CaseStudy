@@ -1,11 +1,9 @@
 ﻿,label,unit,format,direction,definition,monitoring_indicator,display_unit,scale,requirement,available
-pt_share,PT share (strategic PKM),share (0–1),percent,higher,Common-distance-weighted PT share for reporting-area modeled trips at or above MIN_STRATEGIC_PKM_DISTANCE.,True,%,100.0,,True
-car_share,Car share (strategic PKM),share (0–1),percent,lower,Common-distance-weighted car share for the same strategic trip population.,True,%,100.0,,True
 bike_share,Cycling share (strategic PKM),share (0–1),percent,higher,Common-distance-weighted cycling share for the same strategic trip population.,True,%,100.0,,True
+car_share,Car share (strategic PKM),share (0–1),percent,lower,Common-distance-weighted car share for the same strategic trip population.,True,%,100.0,,True
 walk_share,Walking share (strategic PKM),share (0–1),percent,higher,Common-distance-weighted walking share for the same strategic trip population.,True,%,100.0,,True
-pt_share_trips,PT trip share,share (0–1),percent,higher,"Share of reporting-area modeled peak person-trips, including short trips.",True,%,100.0,,True
-car_share_trips,Car trip share,share (0–1),percent,lower,"Share of reporting-area modeled peak person-trips, including short trips.",True,%,100.0,,True
 bike_share_trips,Cycling trip share,share (0–1),percent,higher,"Share of reporting-area modeled peak person-trips, including short trips.",True,%,100.0,,True
+car_share_trips,Car trip share,share (0–1),percent,lower,"Share of reporting-area modeled peak person-trips, including short trips.",True,%,100.0,,True
 walk_share_trips,Walking trip share,share (0–1),percent,higher,"Share of reporting-area modeled peak person-trips, including short trips.",True,%,100.0,,True
 pt_journey_time_min,Average PT journey time,min/trip,,lower,In-vehicle + waiting + access + egress + transfer-walking time per reporting-area modeled PT passenger. Excludes crowding and supplementary passengers; passenger composition can change across plans.,False,,,,True
 congestion_delay_hours,Road delay,person-hours/year,,lower,"Modeled passenger-car delay, converted using the configured peak hours and equivalent days.",True,,,,True
