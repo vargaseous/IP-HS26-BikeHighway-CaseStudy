@@ -72,14 +72,14 @@ DEFAULT_TRIGGERS = {
     # Trigger 1: Section demand -> package 1 (bike highway)
     "trigger1": {
         "signpost":        "bike_trips",
-        "threshold":       30_000,
+        "threshold":       35_582,
         "persistence":     2,       # Consecutive years above threshold
         "lead_time":       10,       # Years of planning and civil works
     },
     # Trigger 2: The same section count -> package 2 (underpasses)
     "trigger2": {
         "signpost":        "bike_trips",
-        "threshold":       55_000,
+        "threshold":       63_229,
         "persistence":     2,
         # Years of tunnel planning and construction after the decision.
         "lead_time":       10,
