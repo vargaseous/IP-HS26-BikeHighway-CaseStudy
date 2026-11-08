@@ -1,7 +1,7 @@
-﻿plan,final_pt_share,pct_acceptable_years,years_in_failure,total_cost,total_construction_co2_tonnes
-baseline,0.469,73.938,10.425,0.0,0.0
-static1,0.469,74.012,10.395,47509241.523,0.0
-static2,0.469,74.038,10.385,51615178.633,0.0
-staged1,0.469,74.038,10.385,42686085.202,0.0
-staged2,0.469,74.038,10.385,44519838.865,0.0
-adaptive,0.469,73.938,10.425,14991955.209,0.0
+﻿plan,final_bike_share,pct_acceptable_years,years_in_failure,total_cost,total_construction_co2_tonnes
+baseline,0.126,73.938,10.425,0.0,0.0
+static1,0.133,81.012,7.595,47509241.523,0.0
+static2,0.136,83.05,6.78,51615178.633,0.0
+staged1,0.136,83.05,6.78,42686085.202,0.0
+staged2,0.136,83.05,6.78,44519838.865,0.0
+adaptive,0.132,76.65,9.34,20991222.758,0.0

@@ -146,6 +146,32 @@ from math import isfinite
 # =============================================================================
 # 1. PACKAGES: RAILWAY IMPROVEMENTS, MOBILITY HUBS AND APPRAISAL
 # =============================================================================
+# Zone selectors matching PROJECT_ZONES in parameters.py
+ALTSTETTEN_ZONE_IDS = [
+    "26101001", "26101002", "26101003", "26101004", "26101006", "26101008",
+    "26101010", "26101012", "26101013", "26101015", "26101016", "26101018",
+    "26101019", "26101020", "26101021", "26101023", "26101029", "26101030",
+    "26101032", "26101033", "26101034", "26101041", "26101046", "26103306",
+]
+DIETIKON_ZONE_IDS = [
+    "24301001", "24301002", "24301003", "24301004", "24301005", "24301006",
+    "24301007", "24301008", "24301009", "24301010", "24301011", "24301012",
+    "24301013", "24301014", "24301015", "24301016", "24301017", "24301018",
+    "24301019", "24301020", "24301021", "24301022", "24301023", "24301024",
+    "24301025", "24301026", "24301027",
+]
+BIKE_HIGHWAY_AREA_PAIR = {"origin": {"grid_id": ALTSTETTEN_ZONE_IDS},
+                          "destination": {"grid_id": DIETIKON_ZONE_IDS}}
+
+
+def _all_corridor_od_pairs():
+    from parameters import CORRIDOR_ZONE_IDS
+    ids = [str(z) for z in CORRIDOR_ZONE_IDS]
+    return [[o, d] for o in ids for d in ids if o != d]
+
+
+BIKE_HIGHWAY_OD_PAIRS = None  # built lazily in get_stages() to avoid the parameters import cycle
+
 PACKAGES = {
     # --- Station package ---
 
@@ -155,12 +181,14 @@ PACKAGES = {
         # Bike highway improvements
         "bike_highways": [
                    {
-                       "area_pairs": [{"origin": {"city_quartier": "Altstetten"}, "destination": {"municipality_name": "Dietikon"}}],
-                       "both_directions": True,
-                       "effects": {
-                           "distance_reduction_pct": 5.0,
-                           "speed_increase_pct": 100 * (16 / 13 - 1)
-                       }
+                        "od_pairs": BIKE_HIGHWAY_OD_PAIRS,
+                        "both_directions": False,
+                        "min_distance_km": 0.0,
+                        "max_distance_km": 1000.0,
+                        "effects": {
+                            "distance_reduction_pct": 5.0,
+                            "speed_increase_pct": 100 * (16 / 13 - 1)
+                        }
                    }
                ],
 
@@ -187,8 +215,10 @@ PACKAGES = {
         # Railway improvements: the same section and service OD scope as above.
         "bike_highways": [
             {
-                "area_pairs": [{"origin": {"city_quartier": "Altstetten"}, "destination": {"municipality_name": "Dietikon"}}],
-                "both_directions": True,
+                "od_pairs": BIKE_HIGHWAY_OD_PAIRS,
+                "both_directions": False,
+                "min_distance_km": 0.0,
+                "max_distance_km": 1000.0,
                 "effects": {
                     "speed_increase_pct": 100 * (18 / 16 - 1)
                                        }
@@ -309,13 +339,24 @@ def get_stages(params: dict | None = None, *, packages: dict | None = None,
     """
     import parameters as p
     params = {**p.NOMINAL_PARAMS, **(params or {})}
+    global BIKE_HIGHWAY_OD_PAIRS
+    if BIKE_HIGHWAY_OD_PAIRS is None:
+        BIKE_HIGHWAY_OD_PAIRS = _all_corridor_od_pairs()
 
     # Waiting effects cover different corridor municipalities in both directions.
     # Section in-vehicle savings instead follow parameters.SECTION route coverage.
-    service_od_pairs = [
-        {"origin": {"municipality_name": o}, "destination": {"municipality_name": d}}
-        for o, d in itertools.combinations(p.CORRIDOR_MUNICIPALITIES, 2)
-    ]
+    # Note for TAs: we modified this logic to make sure that correct OD pairs are used that match PROJECT_ZONES.
+    # The original version of the codebase used CORRIDOR_MUNICIPALITIES to define the OD pairs.
+    # This ended up causing conflicts when we wanted to use the zones instead of municipalities.
+    if getattr(p, "CORRIDOR_DEFINITION_MODE", "municipalities") == "zones":
+        service_od_pairs = [
+            {"origin": {"grid_id": ALTSTETTEN_ZONE_IDS}, "destination": {"grid_id": DIETIKON_ZONE_IDS}},
+        ]
+    else:
+        service_od_pairs = [
+            {"origin": {"municipality_name": o}, "destination": {"municipality_name": d}}
+            for o, d in itertools.combinations(p.CORRIDOR_MUNICIPALITIES, 2)
+        ]
     return _assemble_stages(
         PACKAGES if packages is None else packages, params, service_od_pairs,
         combined_effects=combined_effects,
@@ -415,6 +456,11 @@ def _assemble_stages(packages: dict, params: dict, service_od_pairs: list[dict],
     stages = {0: {"name": "Stage 0 – Baseline Network", "section_time_saving_min": 0.0, **technology}}
     for stage, package in ((1, "stations"), (2, "tunnel")):
         inputs = deepcopy(packages[package])
+        for intervention_list in inputs.values():
+            if isinstance(intervention_list, list):
+                for intervention in intervention_list:
+                    if isinstance(intervention, dict) and intervention.get("od_pairs") is None:
+                        intervention["od_pairs"] = BIKE_HIGHWAY_OD_PAIRS
         inputs.pop("appraisal", None)
         inputs.pop("section_time_saving_min", None)
         inputs.pop("railway_expansions", None)

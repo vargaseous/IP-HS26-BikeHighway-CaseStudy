@@ -1,7 +1,7 @@
 ﻿scenario,package,package_label,decision_year,scheduled_opening_year,opening_year,status,route
-23,1,Stage 1,21.0,27.0,27.0,Open within horizon,Baseline → Stage 1 → Both
-23,2,Stage 2,27.0,37.0,37.0,Open within horizon,Baseline → Stage 1 → Both
-26,1,Stage 1,29.0,35.0,35.0,Open within horizon,Baseline → Stage 1 only
-26,2,Stage 2,,,,No decision,Baseline → Stage 1 only
-0,1,Stage 1,,,,No decision,No package open within horizon
-0,2,Stage 2,,,,No decision,No package open within horizon
+33,1,Stage 1,12.0,22.0,22.0,Open within horizon,Baseline → Stage 1 → Both
+33,2,Stage 2,27.0,37.0,37.0,Open within horizon,Baseline → Stage 1 → Both
+6,1,Stage 1,19.0,29.0,29.0,Open within horizon,Baseline → Stage 1 only
+6,2,Stage 2,,,,No decision,Baseline → Stage 1 only
+22,1,Stage 1,,,,No decision,No package open within horizon
+22,2,Stage 2,,,,No decision,No package open within horizon

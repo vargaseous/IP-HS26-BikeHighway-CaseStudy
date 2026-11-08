@@ -1,401 +1,401 @@
 ﻿package,opening_cohort,year,indicator,median
-Stage 1,No opening,1,bike_trips,38363.08220785212
-Stage 1,No opening,2,bike_trips,38490.45588878605
-Stage 1,No opening,3,bike_trips,38618.656199149846
-Stage 1,No opening,4,bike_trips,38748.07331965726
-Stage 1,No opening,5,bike_trips,38879.20134857738
-Stage 1,No opening,6,bike_trips,39012.66164584644
-Stage 1,No opening,7,bike_trips,39147.9410036036
-Stage 1,No opening,8,bike_trips,39291.93109521351
-Stage 1,No opening,9,bike_trips,39444.88744297966
-Stage 1,No opening,10,bike_trips,39617.84448634787
-Stage 1,No opening,11,bike_trips,39796.786138830204
-Stage 1,No opening,12,bike_trips,39966.66016506098
-Stage 1,No opening,13,bike_trips,40154.79619398986
-Stage 1,No opening,14,bike_trips,40357.399374988396
-Stage 1,No opening,15,bike_trips,40599.222620557695
-Stage 1,No opening,16,bike_trips,40900.05760371935
-Stage 1,No opening,17,bike_trips,41218.61868743952
-Stage 1,No opening,18,bike_trips,41512.211254509064
-Stage 1,No opening,19,bike_trips,41849.455983323074
-Stage 1,No opening,20,bike_trips,42255.36254050468
-Stage 1,No opening,21,bike_trips,42594.40126117514
-Stage 1,No opening,22,bike_trips,42921.932162038545
-Stage 1,No opening,23,bike_trips,43264.11803496952
-Stage 1,No opening,24,bike_trips,43588.8373844166
-Stage 1,No opening,25,bike_trips,43904.186111709554
-Stage 1,No opening,26,bike_trips,44197.83589313082
-Stage 1,No opening,27,bike_trips,44464.85967320266
-Stage 1,No opening,28,bike_trips,44705.982907695514
-Stage 1,No opening,29,bike_trips,44923.288139625016
-Stage 1,No opening,30,bike_trips,45119.439791996396
-Stage 1,No opening,31,bike_trips,45297.4639225099
-Stage 1,No opening,32,bike_trips,45459.98227259081
-Stage 1,No opening,33,bike_trips,45609.53967965732
-Stage 1,No opening,34,bike_trips,45748.377690582325
-Stage 1,No opening,35,bike_trips,45878.407283846725
-Stage 1,No opening,36,bike_trips,46001.14188856112
-Stage 1,No opening,37,bike_trips,46126.71531255246
-Stage 1,No opening,38,bike_trips,46272.480781967024
-Stage 1,No opening,39,bike_trips,46415.688270860875
-Stage 1,No opening,40,bike_trips,46548.28477415882
-Stage 1,No opening,1,pt_journey_time_min,27.332413961271826
-Stage 1,No opening,2,pt_journey_time_min,27.336595913013742
-Stage 1,No opening,3,pt_journey_time_min,27.34032265176493
-Stage 1,No opening,4,pt_journey_time_min,27.343511471264183
-Stage 1,No opening,5,pt_journey_time_min,27.34605729930852
-Stage 1,No opening,6,pt_journey_time_min,27.34782782096611
-Stage 1,No opening,7,pt_journey_time_min,27.348968813628893
-Stage 1,No opening,8,pt_journey_time_min,27.34920748474505
-Stage 1,No opening,9,pt_journey_time_min,27.348270466323292
-Stage 1,No opening,10,pt_journey_time_min,27.345905650587603
-Stage 1,No opening,11,pt_journey_time_min,27.34192488352877
-Stage 1,No opening,12,pt_journey_time_min,27.339117367273584
-Stage 1,No opening,13,pt_journey_time_min,27.335152498181603
-Stage 1,No opening,14,pt_journey_time_min,27.33051119927
-Stage 1,No opening,15,pt_journey_time_min,27.325521384415598
-Stage 1,No opening,16,pt_journey_time_min,27.31864039935531
-Stage 1,No opening,17,pt_journey_time_min,27.306093529978668
-Stage 1,No opening,18,pt_journey_time_min,27.29111376148206
-Stage 1,No opening,19,pt_journey_time_min,27.27332729290458
-Stage 1,No opening,20,pt_journey_time_min,27.260630844927903
-Stage 1,No opening,21,pt_journey_time_min,27.243982337628267
-Stage 1,No opening,22,pt_journey_time_min,27.22463607506256
-Stage 1,No opening,23,pt_journey_time_min,27.206498003739384
-Stage 1,No opening,24,pt_journey_time_min,27.19008943569562
-Stage 1,No opening,25,pt_journey_time_min,27.175676100173913
-Stage 1,No opening,26,pt_journey_time_min,27.163422284108968
-Stage 1,No opening,27,pt_journey_time_min,27.15298418851544
-Stage 1,No opening,28,pt_journey_time_min,27.14456675587446
-Stage 1,No opening,29,pt_journey_time_min,27.137306276440434
-Stage 1,No opening,30,pt_journey_time_min,27.131633720638597
-Stage 1,No opening,31,pt_journey_time_min,27.12780273093923
-Stage 1,No opening,32,pt_journey_time_min,27.125226529992776
-Stage 1,No opening,33,pt_journey_time_min,27.12323618933808
-Stage 1,No opening,34,pt_journey_time_min,27.12201313223929
-Stage 1,No opening,35,pt_journey_time_min,27.121274243729616
-Stage 1,No opening,36,pt_journey_time_min,27.120992384211533
-Stage 1,No opening,37,pt_journey_time_min,27.12106887922506
-Stage 1,No opening,38,pt_journey_time_min,27.121407054138313
-Stage 1,No opening,39,pt_journey_time_min,27.12193025509496
-Stage 1,No opening,40,pt_journey_time_min,27.122578240895667
-Stage 1,Medium opening (Y16–Y25),1,bike_trips,38363.08220785212
-Stage 1,Medium opening (Y16–Y25),2,bike_trips,39062.77641288861
-Stage 1,Medium opening (Y16–Y25),3,bike_trips,39769.83253144977
-Stage 1,Medium opening (Y16–Y25),4,bike_trips,40485.02704881114
-Stage 1,Medium opening (Y16–Y25),5,bike_trips,41209.35220836727
-Stage 1,Medium opening (Y16–Y25),6,bike_trips,41944.06751748931
-Stage 1,Medium opening (Y16–Y25),7,bike_trips,42690.75786405227
-Stage 1,Medium opening (Y16–Y25),8,bike_trips,43451.394988431864
-Stage 1,Medium opening (Y16–Y25),9,bike_trips,44228.39551050411
-Stage 1,Medium opening (Y16–Y25),10,bike_trips,45024.66337353446
-Stage 1,Medium opening (Y16–Y25),11,bike_trips,45843.59727494169
-Stage 1,Medium opening (Y16–Y25),12,bike_trips,46689.03498841777
-Stage 1,Medium opening (Y16–Y25),13,bike_trips,47565.098560102946
-Stage 1,Medium opening (Y16–Y25),14,bike_trips,48497.68845995121
-Stage 1,Medium opening (Y16–Y25),15,bike_trips,49535.8033523649
-Stage 1,Medium opening (Y16–Y25),16,bike_trips,50614.784264056565
-Stage 1,Medium opening (Y16–Y25),17,bike_trips,51735.21389722296
-Stage 1,Medium opening (Y16–Y25),18,bike_trips,52895.20053928198
-Stage 1,Medium opening (Y16–Y25),19,bike_trips,54089.966581463865
-Stage 1,Medium opening (Y16–Y25),20,bike_trips,55311.8954193794
-Stage 1,Medium opening (Y16–Y25),21,bike_trips,56551.15195937025
-Stage 1,Medium opening (Y16–Y25),22,bike_trips,57742.68064752811
-Stage 1,Medium opening (Y16–Y25),23,bike_trips,58962.959301246236
-Stage 1,Medium opening (Y16–Y25),24,bike_trips,60298.46926827796
-Stage 1,Medium opening (Y16–Y25),25,bike_trips,61516.579671212705
-Stage 1,Medium opening (Y16–Y25),26,bike_trips,62728.74295145455
-Stage 1,Medium opening (Y16–Y25),27,bike_trips,63911.76818665939
-Stage 1,Medium opening (Y16–Y25),28,bike_trips,65066.5714016255
-Stage 1,Medium opening (Y16–Y25),29,bike_trips,66196.01692618175
-Stage 1,Medium opening (Y16–Y25),30,bike_trips,67304.70712892868
-Stage 1,Medium opening (Y16–Y25),31,bike_trips,68394.97504894545
-Stage 1,Medium opening (Y16–Y25),32,bike_trips,69481.16591013267
-Stage 1,Medium opening (Y16–Y25),33,bike_trips,70545.70843113087
-Stage 1,Medium opening (Y16–Y25),34,bike_trips,71601.57160175679
-Stage 1,Medium opening (Y16–Y25),35,bike_trips,72651.86429731443
-Stage 1,Medium opening (Y16–Y25),36,bike_trips,73698.7972318772
-Stage 1,Medium opening (Y16–Y25),37,bike_trips,74744.19376701501
-Stage 1,Medium opening (Y16–Y25),38,bike_trips,75789.5397028384
-Stage 1,Medium opening (Y16–Y25),39,bike_trips,76823.10240823205
-Stage 1,Medium opening (Y16–Y25),40,bike_trips,77857.44779404628
-Stage 1,Medium opening (Y16–Y25),1,pt_journey_time_min,27.332413961271826
-Stage 1,Medium opening (Y16–Y25),2,pt_journey_time_min,27.353255872570756
-Stage 1,Medium opening (Y16–Y25),3,pt_journey_time_min,27.37377768873458
-Stage 1,Medium opening (Y16–Y25),4,pt_journey_time_min,27.393914478078496
-Stage 1,Medium opening (Y16–Y25),5,pt_journey_time_min,27.413581669269355
-Stage 1,Medium opening (Y16–Y25),6,pt_journey_time_min,27.43267055311303
-Stage 1,Medium opening (Y16–Y25),7,pt_journey_time_min,27.451043250776635
-Stage 1,Medium opening (Y16–Y25),8,pt_journey_time_min,27.46852745024921
-Stage 1,Medium opening (Y16–Y25),9,pt_journey_time_min,27.48491152310156
-Stage 1,Medium opening (Y16–Y25),10,pt_journey_time_min,27.49994109736698
-Stage 1,Medium opening (Y16–Y25),11,pt_journey_time_min,27.513318793259238
-Stage 1,Medium opening (Y16–Y25),12,pt_journey_time_min,27.524709577659447
-Stage 1,Medium opening (Y16–Y25),13,pt_journey_time_min,27.5337548825486
-Stage 1,Medium opening (Y16–Y25),14,pt_journey_time_min,27.538696523267404
-Stage 1,Medium opening (Y16–Y25),15,pt_journey_time_min,27.540137360739166
-Stage 1,Medium opening (Y16–Y25),16,pt_journey_time_min,27.539296399186487
-Stage 1,Medium opening (Y16–Y25),17,pt_journey_time_min,27.540764425355917
-Stage 1,Medium opening (Y16–Y25),18,pt_journey_time_min,27.540266272949697
-Stage 1,Medium opening (Y16–Y25),19,pt_journey_time_min,27.538096018448616
-Stage 1,Medium opening (Y16–Y25),20,pt_journey_time_min,27.529002495022613
-Stage 1,Medium opening (Y16–Y25),21,pt_journey_time_min,27.509811830405983
-Stage 1,Medium opening (Y16–Y25),22,pt_journey_time_min,27.490159831148812
-Stage 1,Medium opening (Y16–Y25),23,pt_journey_time_min,27.47749592156564
-Stage 1,Medium opening (Y16–Y25),24,pt_journey_time_min,27.469675655429196
-Stage 1,Medium opening (Y16–Y25),25,pt_journey_time_min,27.465473018767756
-Stage 1,Medium opening (Y16–Y25),26,pt_journey_time_min,27.464089242806484
-Stage 1,Medium opening (Y16–Y25),27,pt_journey_time_min,27.46542240329455
-Stage 1,Medium opening (Y16–Y25),28,pt_journey_time_min,27.469390674241396
-Stage 1,Medium opening (Y16–Y25),29,pt_journey_time_min,27.47495502259111
-Stage 1,Medium opening (Y16–Y25),30,pt_journey_time_min,27.482721838120753
-Stage 1,Medium opening (Y16–Y25),31,pt_journey_time_min,27.491857027745986
-Stage 1,Medium opening (Y16–Y25),32,pt_journey_time_min,27.500410343771257
-Stage 1,Medium opening (Y16–Y25),33,pt_journey_time_min,27.512883011735116
-Stage 1,Medium opening (Y16–Y25),34,pt_journey_time_min,27.526554863426952
-Stage 1,Medium opening (Y16–Y25),35,pt_journey_time_min,27.541217169659085
-Stage 1,Medium opening (Y16–Y25),36,pt_journey_time_min,27.556695983816187
-Stage 1,Medium opening (Y16–Y25),37,pt_journey_time_min,27.572849025831577
-Stage 1,Medium opening (Y16–Y25),38,pt_journey_time_min,27.58956161486561
-Stage 1,Medium opening (Y16–Y25),39,pt_journey_time_min,27.606742415144893
-Stage 1,Medium opening (Y16–Y25),40,pt_journey_time_min,27.62431942125968
-Stage 1,Late opening (> Y25),1,bike_trips,38363.08220785212
-Stage 1,Late opening (> Y25),2,bike_trips,38766.458179940026
-Stage 1,Late opening (> Y25),3,bike_trips,39173.13340365368
-Stage 1,Late opening (> Y25),4,bike_trips,39583.53526717457
-Stage 1,Late opening (> Y25),5,bike_trips,39998.208299172584
-Stage 1,Late opening (> Y25),6,bike_trips,40417.841400110025
-Stage 1,Late opening (> Y25),7,bike_trips,40843.29824697318
-Stage 1,Late opening (> Y25),8,bike_trips,41275.64895667203
-Stage 1,Late opening (> Y25),9,bike_trips,41725.08849154792
-Stage 1,Late opening (> Y25),10,bike_trips,42201.36202943775
-Stage 1,Late opening (> Y25),11,bike_trips,42688.652331530946
-Stage 1,Late opening (> Y25),12,bike_trips,43202.93043619704
-Stage 1,Late opening (> Y25),13,bike_trips,43698.255844254476
-Stage 1,Late opening (> Y25),14,bike_trips,44218.0878547608
-Stage 1,Late opening (> Y25),15,bike_trips,44771.62586671723
-Stage 1,Late opening (> Y25),16,bike_trips,45341.520469344105
-Stage 1,Late opening (> Y25),17,bike_trips,45936.09373721792
-Stage 1,Late opening (> Y25),18,bike_trips,46618.99589527924
-Stage 1,Late opening (> Y25),19,bike_trips,47218.226044215444
-Stage 1,Late opening (> Y25),20,bike_trips,47854.280128933126
-Stage 1,Late opening (> Y25),21,bike_trips,48490.61160340271
-Stage 1,Late opening (> Y25),22,bike_trips,49258.88638326957
-Stage 1,Late opening (> Y25),23,bike_trips,50026.81885094968
-Stage 1,Late opening (> Y25),24,bike_trips,50640.77749240368
-Stage 1,Late opening (> Y25),25,bike_trips,51273.880588894266
-Stage 1,Late opening (> Y25),26,bike_trips,51907.71297756034
-Stage 1,Late opening (> Y25),27,bike_trips,52542.16326034479
-Stage 1,Late opening (> Y25),28,bike_trips,53177.30376406218
-Stage 1,Late opening (> Y25),29,bike_trips,53813.333422822485
-Stage 1,Late opening (> Y25),30,bike_trips,54450.52350412435
-Stage 1,Late opening (> Y25),31,bike_trips,55125.941995714136
-Stage 1,Late opening (> Y25),32,bike_trips,55713.49587257734
-Stage 1,Late opening (> Y25),33,bike_trips,56291.88513811501
-Stage 1,Late opening (> Y25),34,bike_trips,56834.09517546954
-Stage 1,Late opening (> Y25),35,bike_trips,57285.4007599104
-Stage 1,Late opening (> Y25),36,bike_trips,57743.51109925839
-Stage 1,Late opening (> Y25),37,bike_trips,58288.85266646386
-Stage 1,Late opening (> Y25),38,bike_trips,58821.45344960584
-Stage 1,Late opening (> Y25),39,bike_trips,59308.79875275994
-Stage 1,Late opening (> Y25),40,bike_trips,59902.309064885354
-Stage 1,Late opening (> Y25),1,pt_journey_time_min,27.332413961271826
-Stage 1,Late opening (> Y25),2,pt_journey_time_min,27.34497845499882
-Stage 1,Late opening (> Y25),3,pt_journey_time_min,27.35725490983045
-Stage 1,Late opening (> Y25),4,pt_journey_time_min,27.36908252984164
-Stage 1,Late opening (> Y25),5,pt_journey_time_min,27.381002491605777
-Stage 1,Late opening (> Y25),6,pt_journey_time_min,27.39266607883594
-Stage 1,Late opening (> Y25),7,pt_journey_time_min,27.402248598736055
-Stage 1,Late opening (> Y25),8,pt_journey_time_min,27.412196235801748
-Stage 1,Late opening (> Y25),9,pt_journey_time_min,27.422868037321564
-Stage 1,Late opening (> Y25),10,pt_journey_time_min,27.431040988150784
-Stage 1,Late opening (> Y25),11,pt_journey_time_min,27.436532179777412
-Stage 1,Late opening (> Y25),12,pt_journey_time_min,27.440038939087284
-Stage 1,Late opening (> Y25),13,pt_journey_time_min,27.441228852694564
-Stage 1,Late opening (> Y25),14,pt_journey_time_min,27.442379805762112
-Stage 1,Late opening (> Y25),15,pt_journey_time_min,27.445605828794868
-Stage 1,Late opening (> Y25),16,pt_journey_time_min,27.445270794552794
-Stage 1,Late opening (> Y25),17,pt_journey_time_min,27.44493600255676
-Stage 1,Late opening (> Y25),18,pt_journey_time_min,27.43882008863459
-Stage 1,Late opening (> Y25),19,pt_journey_time_min,27.43231679246599
-Stage 1,Late opening (> Y25),20,pt_journey_time_min,27.42479156332406
-Stage 1,Late opening (> Y25),21,pt_journey_time_min,27.416783595828086
-Stage 1,Late opening (> Y25),22,pt_journey_time_min,27.403622788851763
-Stage 1,Late opening (> Y25),23,pt_journey_time_min,27.39226785513174
-Stage 1,Late opening (> Y25),24,pt_journey_time_min,27.383850319195872
-Stage 1,Late opening (> Y25),25,pt_journey_time_min,27.379436067956004
-Stage 1,Late opening (> Y25),26,pt_journey_time_min,27.37594318443748
-Stage 1,Late opening (> Y25),27,pt_journey_time_min,27.368554690048928
-Stage 1,Late opening (> Y25),28,pt_journey_time_min,27.369083219483585
-Stage 1,Late opening (> Y25),29,pt_journey_time_min,27.367620028012166
-Stage 1,Late opening (> Y25),30,pt_journey_time_min,27.369961313645852
-Stage 1,Late opening (> Y25),31,pt_journey_time_min,27.374277211686817
-Stage 1,Late opening (> Y25),32,pt_journey_time_min,27.380243903789257
-Stage 1,Late opening (> Y25),33,pt_journey_time_min,27.387563754307553
-Stage 1,Late opening (> Y25),34,pt_journey_time_min,27.393057004163563
-Stage 1,Late opening (> Y25),35,pt_journey_time_min,27.400676254640217
-Stage 1,Late opening (> Y25),36,pt_journey_time_min,27.41024389061938
-Stage 1,Late opening (> Y25),37,pt_journey_time_min,27.41979042972138
-Stage 1,Late opening (> Y25),38,pt_journey_time_min,27.424547388260912
-Stage 1,Late opening (> Y25),39,pt_journey_time_min,27.43238499381638
-Stage 1,Late opening (> Y25),40,pt_journey_time_min,27.4383238766897
-Stage 2,No opening,1,bike_trips,38363.08220785212
-Stage 2,No opening,2,bike_trips,38601.04376680073
-Stage 2,No opening,3,bike_trips,38842.115527958515
-Stage 2,No opening,4,bike_trips,39087.07430066763
-Stage 2,No opening,5,bike_trips,39336.90598774848
-Stage 2,No opening,6,bike_trips,39592.85312020008
-Stage 2,No opening,7,bike_trips,39856.46744423864
-Stage 2,No opening,8,bike_trips,40117.30785723872
-Stage 2,No opening,9,bike_trips,40407.033444191045
-Stage 2,No opening,10,bike_trips,40714.55110866462
-Stage 2,No opening,11,bike_trips,41011.382494313344
-Stage 2,No opening,12,bike_trips,41303.41927585283
-Stage 2,No opening,13,bike_trips,41604.496798114735
-Stage 2,No opening,14,bike_trips,41915.85705444384
-Stage 2,No opening,15,bike_trips,42251.66714620126
-Stage 2,No opening,16,bike_trips,42652.144413616166
-Stage 2,No opening,17,bike_trips,43079.271772245134
-Stage 2,No opening,18,bike_trips,43480.57616083302
-Stage 2,No opening,19,bike_trips,43895.754463561156
-Stage 2,No opening,20,bike_trips,44366.369048191824
-Stage 2,No opening,21,bike_trips,44843.68258726721
-Stage 2,No opening,22,bike_trips,45319.99418533105
-Stage 2,No opening,23,bike_trips,45787.93474672108
-Stage 2,No opening,24,bike_trips,46241.34163291876
-Stage 2,No opening,25,bike_trips,46675.82858039985
-Stage 2,No opening,26,bike_trips,47088.96577362173
-Stage 2,No opening,27,bike_trips,47480.11612869748
-Stage 2,No opening,28,bike_trips,47850.054604030905
-Stage 2,No opening,29,bike_trips,48200.51089602155
-Stage 2,No opening,30,bike_trips,48533.75563097017
-Stage 2,No opening,31,bike_trips,48852.38489857609
-Stage 2,No opening,32,bike_trips,49158.60962891855
-Stage 2,No opening,33,bike_trips,49458.96902489835
-Stage 2,No opening,34,bike_trips,49750.67500407296
-Stage 2,No opening,35,bike_trips,50034.843501650015
-Stage 2,No opening,36,bike_trips,50313.04979852809
-Stage 2,No opening,37,bike_trips,50586.58829020943
-Stage 2,No opening,38,bike_trips,50856.50900890332
-Stage 2,No opening,39,bike_trips,51123.65547941769
-Stage 2,No opening,40,bike_trips,51388.700291043286
-Stage 2,No opening,1,pt_journey_time_min,27.332413961271826
-Stage 2,No opening,2,pt_journey_time_min,27.33995734457696
-Stage 2,No opening,3,pt_journey_time_min,27.3472230885669
-Stage 2,No opening,4,pt_journey_time_min,27.353959883482624
-Stage 2,No opening,5,pt_journey_time_min,27.36002871533827
-Stage 2,No opening,6,pt_journey_time_min,27.365741166206014
-Stage 2,No opening,7,pt_journey_time_min,27.370350449895668
-Stage 2,No opening,8,pt_journey_time_min,27.373594645546444
-Stage 2,No opening,9,pt_journey_time_min,27.377138840153705
-Stage 2,No opening,10,pt_journey_time_min,27.379399763657645
-Stage 2,No opening,11,pt_journey_time_min,27.381379066641973
-Stage 2,No opening,12,pt_journey_time_min,27.380543175808633
-Stage 2,No opening,13,pt_journey_time_min,27.37827138241774
-Stage 2,No opening,14,pt_journey_time_min,27.374560860141177
-Stage 2,No opening,15,pt_journey_time_min,27.36881292943259
-Stage 2,No opening,16,pt_journey_time_min,27.360914681086157
-Stage 2,No opening,17,pt_journey_time_min,27.35086605588465
-Stage 2,No opening,18,pt_journey_time_min,27.33881784393949
-Stage 2,No opening,19,pt_journey_time_min,27.319383000441075
-Stage 2,No opening,20,pt_journey_time_min,27.30533624959501
-Stage 2,No opening,21,pt_journey_time_min,27.291006997624724
-Stage 2,No opening,22,pt_journey_time_min,27.275125704936404
-Stage 2,No opening,23,pt_journey_time_min,27.260821367952218
-Stage 2,No opening,24,pt_journey_time_min,27.24998896705099
-Stage 2,No opening,25,pt_journey_time_min,27.239618514620258
-Stage 2,No opening,26,pt_journey_time_min,27.230951543085393
-Stage 2,No opening,27,pt_journey_time_min,27.223999159675387
-Stage 2,No opening,28,pt_journey_time_min,27.21866822536727
-Stage 2,No opening,29,pt_journey_time_min,27.214798184016253
-Stage 2,No opening,30,pt_journey_time_min,27.21219441857235
-Stage 2,No opening,31,pt_journey_time_min,27.209846852812216
-Stage 2,No opening,32,pt_journey_time_min,27.209983027406924
-Stage 2,No opening,33,pt_journey_time_min,27.21000647189518
-Stage 2,No opening,34,pt_journey_time_min,27.210572650652924
-Stage 2,No opening,35,pt_journey_time_min,27.21155390008902
-Stage 2,No opening,36,pt_journey_time_min,27.212845130352687
-Stage 2,No opening,37,pt_journey_time_min,27.214361290331215
-Stage 2,No opening,38,pt_journey_time_min,27.211647236341125
-Stage 2,No opening,39,pt_journey_time_min,27.211793965365054
-Stage 2,No opening,40,pt_journey_time_min,27.214695067460003
-Stage 2,Late opening (> Y25),1,bike_trips,38363.08220785212
-Stage 2,Late opening (> Y25),2,bike_trips,38921.088529943794
-Stage 2,Late opening (> Y25),3,bike_trips,39483.72951105032
-Stage 2,Late opening (> Y25),4,bike_trips,40051.41486958027
-Stage 2,Late opening (> Y25),5,bike_trips,40624.66769346975
-Stage 2,Late opening (> Y25),6,bike_trips,41205.60823277424
-Stage 2,Late opening (> Y25),7,bike_trips,41798.52427401068
-Stage 2,Late opening (> Y25),8,bike_trips,42402.79648904204
-Stage 2,Late opening (> Y25),9,bike_trips,43020.475627139305
-Stage 2,Late opening (> Y25),10,bike_trips,43654.02100532321
-Stage 2,Late opening (> Y25),11,bike_trips,44284.30703072208
-Stage 2,Late opening (> Y25),12,bike_trips,44907.88805204257
-Stage 2,Late opening (> Y25),13,bike_trips,45539.83662233926
-Stage 2,Late opening (> Y25),14,bike_trips,46210.745877061636
-Stage 2,Late opening (> Y25),15,bike_trips,46922.06530516833
-Stage 2,Late opening (> Y25),16,bike_trips,47690.72322524464
-Stage 2,Late opening (> Y25),17,bike_trips,48492.14144141955
-Stage 2,Late opening (> Y25),18,bike_trips,49326.615616983334
-Stage 2,Late opening (> Y25),19,bike_trips,50250.6189299309
-Stage 2,Late opening (> Y25),20,bike_trips,51144.48630369678
-Stage 2,Late opening (> Y25),21,bike_trips,52150.43301328858
-Stage 2,Late opening (> Y25),22,bike_trips,53141.534459796334
-Stage 2,Late opening (> Y25),23,bike_trips,54070.85272624358
-Stage 2,Late opening (> Y25),24,bike_trips,54969.312004921645
-Stage 2,Late opening (> Y25),25,bike_trips,55897.279313938234
-Stage 2,Late opening (> Y25),26,bike_trips,56804.5770858586
-Stage 2,Late opening (> Y25),27,bike_trips,57724.60788249769
-Stage 2,Late opening (> Y25),28,bike_trips,58591.65687941699
-Stage 2,Late opening (> Y25),29,bike_trips,59448.04538423916
-Stage 2,Late opening (> Y25),30,bike_trips,60291.895242414255
-Stage 2,Late opening (> Y25),31,bike_trips,61119.87360276454
-Stage 2,Late opening (> Y25),32,bike_trips,61914.01737627223
-Stage 2,Late opening (> Y25),33,bike_trips,62686.740793397155
-Stage 2,Late opening (> Y25),34,bike_trips,63468.299510606426
-Stage 2,Late opening (> Y25),35,bike_trips,64312.28287953062
-Stage 2,Late opening (> Y25),36,bike_trips,65120.183471159005
-Stage 2,Late opening (> Y25),37,bike_trips,65920.46782491742
-Stage 2,Late opening (> Y25),38,bike_trips,66626.18373037237
-Stage 2,Late opening (> Y25),39,bike_trips,67329.02394988255
-Stage 2,Late opening (> Y25),40,bike_trips,68030.11513767905
-Stage 2,Late opening (> Y25),1,pt_journey_time_min,27.332413961271826
-Stage 2,Late opening (> Y25),2,pt_journey_time_min,27.349869972554046
-Stage 2,Late opening (> Y25),3,pt_journey_time_min,27.366990649828555
-Stage 2,Late opening (> Y25),4,pt_journey_time_min,27.383700781622263
-Stage 2,Late opening (> Y25),5,pt_journey_time_min,27.399904346770978
-Stage 2,Late opening (> Y25),6,pt_journey_time_min,27.41547980623669
-Stage 2,Late opening (> Y25),7,pt_journey_time_min,27.43027487792149
-Stage 2,Late opening (> Y25),8,pt_journey_time_min,27.444101134486942
-Stage 2,Late opening (> Y25),9,pt_journey_time_min,27.456729097293692
-Stage 2,Late opening (> Y25),10,pt_journey_time_min,27.46788499331457
-Stage 2,Late opening (> Y25),11,pt_journey_time_min,27.477251007495287
-Stage 2,Late opening (> Y25),12,pt_journey_time_min,27.48699184162451
-Stage 2,Late opening (> Y25),13,pt_journey_time_min,27.49505587062716
-Stage 2,Late opening (> Y25),14,pt_journey_time_min,27.499588128321253
-Stage 2,Late opening (> Y25),15,pt_journey_time_min,27.497780827088107
-Stage 2,Late opening (> Y25),16,pt_journey_time_min,27.492281336668576
-Stage 2,Late opening (> Y25),17,pt_journey_time_min,27.483053273495017
-Stage 2,Late opening (> Y25),18,pt_journey_time_min,27.473710891009354
-Stage 2,Late opening (> Y25),19,pt_journey_time_min,27.471983850033613
-Stage 2,Late opening (> Y25),20,pt_journey_time_min,27.461054624568753
-Stage 2,Late opening (> Y25),21,pt_journey_time_min,27.456224388546733
-Stage 2,Late opening (> Y25),22,pt_journey_time_min,27.451172742320647
-Stage 2,Late opening (> Y25),23,pt_journey_time_min,27.45126101772938
-Stage 2,Late opening (> Y25),24,pt_journey_time_min,27.445037779920753
-Stage 2,Late opening (> Y25),25,pt_journey_time_min,27.432657208574454
-Stage 2,Late opening (> Y25),26,pt_journey_time_min,27.43223492002036
-Stage 2,Late opening (> Y25),27,pt_journey_time_min,27.42921410696199
-Stage 2,Late opening (> Y25),28,pt_journey_time_min,27.4295055762363
-Stage 2,Late opening (> Y25),29,pt_journey_time_min,27.4328697109741
-Stage 2,Late opening (> Y25),30,pt_journey_time_min,27.43898049015106
-Stage 2,Late opening (> Y25),31,pt_journey_time_min,27.4454433763563
-Stage 2,Late opening (> Y25),32,pt_journey_time_min,27.455653102346673
-Stage 2,Late opening (> Y25),33,pt_journey_time_min,27.467369398272975
-Stage 2,Late opening (> Y25),34,pt_journey_time_min,27.48048011963744
-Stage 2,Late opening (> Y25),35,pt_journey_time_min,27.49468626691323
-Stage 2,Late opening (> Y25),36,pt_journey_time_min,27.503322240408867
-Stage 2,Late opening (> Y25),37,pt_journey_time_min,27.51723887319137
-Stage 2,Late opening (> Y25),38,pt_journey_time_min,27.526100424885673
-Stage 2,Late opening (> Y25),39,pt_journey_time_min,27.537904283936136
-Stage 2,Late opening (> Y25),40,pt_journey_time_min,27.549725658454513
+Stage 1,No opening,1,bike_trips,38359.87882543197
+Stage 1,No opening,2,bike_trips,38407.34334640249
+Stage 1,No opening,3,bike_trips,38455.358677459306
+Stage 1,No opening,4,bike_trips,38504.32761895053
+Stage 1,No opening,5,bike_trips,38554.75935508385
+Stage 1,No opening,6,bike_trips,38607.29301437568
+Stage 1,No opening,7,bike_trips,38662.723445883676
+Stage 1,No opening,8,bike_trips,38722.02723542505
+Stage 1,No opening,9,bike_trips,38786.38519707288
+Stage 1,No opening,10,bike_trips,38857.19497486252
+Stage 1,No opening,11,bike_trips,38936.06397331028
+Stage 1,No opening,12,bike_trips,39018.014113905956
+Stage 1,No opening,13,bike_trips,39132.49368076974
+Stage 1,No opening,14,bike_trips,39256.12515751309
+Stage 1,No opening,15,bike_trips,39383.784220694186
+Stage 1,No opening,16,bike_trips,39526.92878338339
+Stage 1,No opening,17,bike_trips,39705.01356684565
+Stage 1,No opening,18,bike_trips,39933.62354684343
+Stage 1,No opening,19,bike_trips,40180.17201148397
+Stage 1,No opening,20,bike_trips,40438.251841966776
+Stage 1,No opening,21,bike_trips,40672.07608731417
+Stage 1,No opening,22,bike_trips,40889.703238862625
+Stage 1,No opening,23,bike_trips,41082.290803113516
+Stage 1,No opening,24,bike_trips,41228.144019627274
+Stage 1,No opening,25,bike_trips,41373.07578510185
+Stage 1,No opening,26,bike_trips,41514.21905862783
+Stage 1,No opening,27,bike_trips,41637.66483240033
+Stage 1,No opening,28,bike_trips,41750.8237441996
+Stage 1,No opening,29,bike_trips,41848.946525857595
+Stage 1,No opening,30,bike_trips,41931.69928984674
+Stage 1,No opening,31,bike_trips,42001.0449821885
+Stage 1,No opening,32,bike_trips,42067.10064695691
+Stage 1,No opening,33,bike_trips,42138.79256450737
+Stage 1,No opening,34,bike_trips,42205.83351616234
+Stage 1,No opening,35,bike_trips,42268.840987132724
+Stage 1,No opening,36,bike_trips,42324.10249067233
+Stage 1,No opening,37,bike_trips,42332.60709332595
+Stage 1,No opening,38,bike_trips,42336.0964684941
+Stage 1,No opening,39,bike_trips,42335.26720201201
+Stage 1,No opening,40,bike_trips,42330.67286787109
+Stage 1,No opening,1,bike_tt_hours,8999.437706238741
+Stage 1,No opening,2,bike_tt_hours,9011.103000692816
+Stage 1,No opening,3,bike_tt_hours,9022.5863578017
+Stage 1,No opening,4,bike_tt_hours,9033.978330073884
+Stage 1,No opening,5,bike_tt_hours,9045.393370009202
+Stage 1,No opening,6,bike_tt_hours,9056.975192722834
+Stage 1,No opening,7,bike_tt_hours,9068.902674380923
+Stage 1,No opening,8,bike_tt_hours,9081.39585543062
+Stage 1,No opening,9,bike_tt_hours,9095.679739064715
+Stage 1,No opening,10,bike_tt_hours,9111.614143498438
+Stage 1,No opening,11,bike_tt_hours,9130.442836745762
+Stage 1,No opening,12,bike_tt_hours,9154.31037456207
+Stage 1,No opening,13,bike_tt_hours,9182.356645311213
+Stage 1,No opening,14,bike_tt_hours,9215.243355016053
+Stage 1,No opening,15,bike_tt_hours,9244.484070191193
+Stage 1,No opening,16,bike_tt_hours,9276.976282287387
+Stage 1,No opening,17,bike_tt_hours,9312.856172388714
+Stage 1,No opening,18,bike_tt_hours,9351.838402336607
+Stage 1,No opening,19,bike_tt_hours,9401.023422401013
+Stage 1,No opening,20,bike_tt_hours,9455.914304496328
+Stage 1,No opening,21,bike_tt_hours,9509.036907909544
+Stage 1,No opening,22,bike_tt_hours,9551.308478568868
+Stage 1,No opening,23,bike_tt_hours,9591.803912495936
+Stage 1,No opening,24,bike_tt_hours,9629.662973781462
+Stage 1,No opening,25,bike_tt_hours,9664.271811426617
+Stage 1,No opening,26,bike_tt_hours,9695.295737260585
+Stage 1,No opening,27,bike_tt_hours,9722.712701283384
+Stage 1,No opening,28,bike_tt_hours,9747.157118384977
+Stage 1,No opening,29,bike_tt_hours,9768.395051411117
+Stage 1,No opening,30,bike_tt_hours,9786.618355900187
+Stage 1,No opening,31,bike_tt_hours,9802.114126537215
+Stage 1,No opening,32,bike_tt_hours,9815.300754190725
+Stage 1,No opening,33,bike_tt_hours,9826.530119673378
+Stage 1,No opening,34,bike_tt_hours,9836.0924631243
+Stage 1,No opening,35,bike_tt_hours,9842.348247733931
+Stage 1,No opening,36,bike_tt_hours,9845.49729981818
+Stage 1,No opening,37,bike_tt_hours,9847.38547871985
+Stage 1,No opening,38,bike_tt_hours,9848.177927393783
+Stage 1,No opening,39,bike_tt_hours,9848.007266005283
+Stage 1,No opening,40,bike_tt_hours,9843.301379636625
+Stage 1,Medium opening (Y16–Y25),1,bike_trips,38359.87882543197
+Stage 1,Medium opening (Y16–Y25),2,bike_trips,38908.56408186059
+Stage 1,Medium opening (Y16–Y25),3,bike_trips,39462.81163127086
+Stage 1,Medium opening (Y16–Y25),4,bike_trips,40023.27173115579
+Stage 1,Medium opening (Y16–Y25),5,bike_trips,40590.77443126679
+Stage 1,Medium opening (Y16–Y25),6,bike_trips,41165.44948214283
+Stage 1,Medium opening (Y16–Y25),7,bike_trips,41747.25427030589
+Stage 1,Medium opening (Y16–Y25),8,bike_trips,42338.49358141844
+Stage 1,Medium opening (Y16–Y25),9,bike_trips,42940.78312940893
+Stage 1,Medium opening (Y16–Y25),10,bike_trips,43556.05956982869
+Stage 1,Medium opening (Y16–Y25),11,bike_trips,44186.58275941716
+Stage 1,Medium opening (Y16–Y25),12,bike_trips,44834.895130713005
+Stage 1,Medium opening (Y16–Y25),13,bike_trips,45503.71428504883
+Stage 1,Medium opening (Y16–Y25),14,bike_trips,46181.2925155288
+Stage 1,Medium opening (Y16–Y25),15,bike_trips,46868.64548301469
+Stage 1,Medium opening (Y16–Y25),16,bike_trips,47598.07084318346
+Stage 1,Medium opening (Y16–Y25),17,bike_trips,48395.207899068235
+Stage 1,Medium opening (Y16–Y25),18,bike_trips,49256.11426015773
+Stage 1,Medium opening (Y16–Y25),19,bike_trips,50159.47883701078
+Stage 1,Medium opening (Y16–Y25),20,bike_trips,51113.20972832205
+Stage 1,Medium opening (Y16–Y25),21,bike_trips,52029.02636736659
+Stage 1,Medium opening (Y16–Y25),22,bike_trips,52941.32432168536
+Stage 1,Medium opening (Y16–Y25),23,bike_trips,56289.42550657667
+Stage 1,Medium opening (Y16–Y25),24,bike_trips,57404.644029469535
+Stage 1,Medium opening (Y16–Y25),25,bike_trips,58298.5399890701
+Stage 1,Medium opening (Y16–Y25),26,bike_trips,59179.52852924049
+Stage 1,Medium opening (Y16–Y25),27,bike_trips,60048.49600765931
+Stage 1,Medium opening (Y16–Y25),28,bike_trips,60901.87140269424
+Stage 1,Medium opening (Y16–Y25),29,bike_trips,61747.658322878415
+Stage 1,Medium opening (Y16–Y25),30,bike_trips,62574.22140598128
+Stage 1,Medium opening (Y16–Y25),31,bike_trips,63389.67153241152
+Stage 1,Medium opening (Y16–Y25),32,bike_trips,64196.27805473512
+Stage 1,Medium opening (Y16–Y25),33,bike_trips,64996.13665979318
+Stage 1,Medium opening (Y16–Y25),34,bike_trips,65791.37418113706
+Stage 1,Medium opening (Y16–Y25),35,bike_trips,66583.46453044238
+Stage 1,Medium opening (Y16–Y25),36,bike_trips,67373.59397510081
+Stage 1,Medium opening (Y16–Y25),37,bike_trips,68162.85492726993
+Stage 1,Medium opening (Y16–Y25),38,bike_trips,68952.05554091916
+Stage 1,Medium opening (Y16–Y25),39,bike_trips,70222.93400807257
+Stage 1,Medium opening (Y16–Y25),40,bike_trips,71530.3338352404
+Stage 1,Medium opening (Y16–Y25),1,bike_tt_hours,8999.437706238741
+Stage 1,Medium opening (Y16–Y25),2,bike_tt_hours,9131.415246058112
+Stage 1,Medium opening (Y16–Y25),3,bike_tt_hours,9264.219634997276
+Stage 1,Medium opening (Y16–Y25),4,bike_tt_hours,9397.885291925952
+Stage 1,Medium opening (Y16–Y25),5,bike_tt_hours,9532.457007578701
+Stage 1,Medium opening (Y16–Y25),6,bike_tt_hours,9667.99237889436
+Stage 1,Medium opening (Y16–Y25),7,bike_tt_hours,9804.564538402294
+Stage 1,Medium opening (Y16–Y25),8,bike_tt_hours,9942.265014354485
+Stage 1,Medium opening (Y16–Y25),9,bike_tt_hours,10081.206386165446
+Stage 1,Medium opening (Y16–Y25),10,bike_tt_hours,10223.379035942278
+Stage 1,Medium opening (Y16–Y25),11,bike_tt_hours,10368.703375081725
+Stage 1,Medium opening (Y16–Y25),12,bike_tt_hours,10517.580829829356
+Stage 1,Medium opening (Y16–Y25),13,bike_tt_hours,10669.974117847905
+Stage 1,Medium opening (Y16–Y25),14,bike_tt_hours,10826.302699840122
+Stage 1,Medium opening (Y16–Y25),15,bike_tt_hours,10986.931715094102
+Stage 1,Medium opening (Y16–Y25),16,bike_tt_hours,11160.670590849866
+Stage 1,Medium opening (Y16–Y25),17,bike_tt_hours,11345.564923165726
+Stage 1,Medium opening (Y16–Y25),18,bike_tt_hours,11539.702234140488
+Stage 1,Medium opening (Y16–Y25),19,bike_tt_hours,11740.082148231382
+Stage 1,Medium opening (Y16–Y25),20,bike_tt_hours,11943.67676166053
+Stage 1,Medium opening (Y16–Y25),21,bike_tt_hours,12149.142569949523
+Stage 1,Medium opening (Y16–Y25),22,bike_tt_hours,12355.018503842392
+Stage 1,Medium opening (Y16–Y25),23,bike_tt_hours,12416.710046465938
+Stage 1,Medium opening (Y16–Y25),24,bike_tt_hours,12584.187643346886
+Stage 1,Medium opening (Y16–Y25),25,bike_tt_hours,12774.868238716645
+Stage 1,Medium opening (Y16–Y25),26,bike_tt_hours,12962.463170424844
+Stage 1,Medium opening (Y16–Y25),27,bike_tt_hours,13146.918119064805
+Stage 1,Medium opening (Y16–Y25),28,bike_tt_hours,13328.239182516274
+Stage 1,Medium opening (Y16–Y25),29,bike_tt_hours,13506.749102639737
+Stage 1,Medium opening (Y16–Y25),30,bike_tt_hours,13682.920059856278
+Stage 1,Medium opening (Y16–Y25),31,bike_tt_hours,13857.493561337415
+Stage 1,Medium opening (Y16–Y25),32,bike_tt_hours,14030.574999247765
+Stage 1,Medium opening (Y16–Y25),33,bike_tt_hours,14202.553563327663
+Stage 1,Medium opening (Y16–Y25),34,bike_tt_hours,14373.771025279237
+Stage 1,Medium opening (Y16–Y25),35,bike_tt_hours,14544.518557013374
+Stage 1,Medium opening (Y16–Y25),36,bike_tt_hours,14715.03873942864
+Stage 1,Medium opening (Y16–Y25),37,bike_tt_hours,14885.530314053216
+Stage 1,Medium opening (Y16–Y25),38,bike_tt_hours,15056.154051426718
+Stage 1,Medium opening (Y16–Y25),39,bike_tt_hours,15077.815477677817
+Stage 1,Medium opening (Y16–Y25),40,bike_tt_hours,15210.794661531807
+Stage 1,Late opening (> Y25),1,bike_trips,38359.87882543197
+Stage 1,Late opening (> Y25),2,bike_trips,38636.41738364741
+Stage 1,Late opening (> Y25),3,bike_trips,38915.233276204264
+Stage 1,Late opening (> Y25),4,bike_trips,39196.791274938994
+Stage 1,Late opening (> Y25),5,bike_trips,39481.68187944076
+Stage 1,Late opening (> Y25),6,bike_trips,39769.33103241245
+Stage 1,Late opening (> Y25),7,bike_trips,40061.85277834603
+Stage 1,Late opening (> Y25),8,bike_trips,40359.7818471036
+Stage 1,Late opening (> Y25),9,bike_trips,40666.57217845782
+Stage 1,Late opening (> Y25),10,bike_trips,40994.91133569904
+Stage 1,Late opening (> Y25),11,bike_trips,41339.79564971497
+Stage 1,Late opening (> Y25),12,bike_trips,41702.292058735635
+Stage 1,Late opening (> Y25),13,bike_trips,42080.319519257675
+Stage 1,Late opening (> Y25),14,bike_trips,42475.489291666425
+Stage 1,Late opening (> Y25),15,bike_trips,42899.73817337373
+Stage 1,Late opening (> Y25),16,bike_trips,43363.25361888244
+Stage 1,Late opening (> Y25),17,bike_trips,43867.32605840039
+Stage 1,Late opening (> Y25),18,bike_trips,44354.36064721414
+Stage 1,Late opening (> Y25),19,bike_trips,44828.97842591022
+Stage 1,Late opening (> Y25),20,bike_trips,45344.10055829868
+Stage 1,Late opening (> Y25),21,bike_trips,45870.92904547785
+Stage 1,Late opening (> Y25),22,bike_trips,46403.66741981742
+Stage 1,Late opening (> Y25),23,bike_trips,46924.98489969849
+Stage 1,Late opening (> Y25),24,bike_trips,47432.52974557762
+Stage 1,Late opening (> Y25),25,bike_trips,47951.76984799637
+Stage 1,Late opening (> Y25),26,bike_trips,48451.10613379281
+Stage 1,Late opening (> Y25),27,bike_trips,48920.337479395006
+Stage 1,Late opening (> Y25),28,bike_trips,49360.32399450166
+Stage 1,Late opening (> Y25),29,bike_trips,49849.87360943368
+Stage 1,Late opening (> Y25),30,bike_trips,52699.020283996055
+Stage 1,Late opening (> Y25),31,bike_trips,53094.86763477507
+Stage 1,Late opening (> Y25),32,bike_trips,53467.37981550664
+Stage 1,Late opening (> Y25),33,bike_trips,53828.17503948633
+Stage 1,Late opening (> Y25),34,bike_trips,54179.33863848241
+Stage 1,Late opening (> Y25),35,bike_trips,54524.60370318123
+Stage 1,Late opening (> Y25),36,bike_trips,54871.483734043315
+Stage 1,Late opening (> Y25),37,bike_trips,55214.18018473654
+Stage 1,Late opening (> Y25),38,bike_trips,55553.672772275124
+Stage 1,Late opening (> Y25),39,bike_trips,55901.91242788378
+Stage 1,Late opening (> Y25),40,bike_trips,56265.01779249417
+Stage 1,Late opening (> Y25),1,bike_tt_hours,8999.437706238741
+Stage 1,Late opening (> Y25),2,bike_tt_hours,9065.71039324045
+Stage 1,Late opening (> Y25),3,bike_tt_hours,9132.466883551657
+Stage 1,Late opening (> Y25),4,bike_tt_hours,9199.816895563064
+Stage 1,Late opening (> Y25),5,bike_tt_hours,9268.0080969401
+Stage 1,Late opening (> Y25),6,bike_tt_hours,9337.573579874492
+Stage 1,Late opening (> Y25),7,bike_tt_hours,9408.579706891462
+Stage 1,Late opening (> Y25),8,bike_tt_hours,9481.36497355903
+Stage 1,Late opening (> Y25),9,bike_tt_hours,9556.340932371962
+Stage 1,Late opening (> Y25),10,bike_tt_hours,9632.605604805784
+Stage 1,Late opening (> Y25),11,bike_tt_hours,9709.188310191592
+Stage 1,Late opening (> Y25),12,bike_tt_hours,9788.025411591983
+Stage 1,Late opening (> Y25),13,bike_tt_hours,9871.065074186055
+Stage 1,Late opening (> Y25),14,bike_tt_hours,9963.868578578653
+Stage 1,Late opening (> Y25),15,bike_tt_hours,10062.500872987377
+Stage 1,Late opening (> Y25),16,bike_tt_hours,10162.347456654374
+Stage 1,Late opening (> Y25),17,bike_tt_hours,10269.490332876478
+Stage 1,Late opening (> Y25),18,bike_tt_hours,10388.23333336302
+Stage 1,Late opening (> Y25),19,bike_tt_hours,10513.655891198629
+Stage 1,Late opening (> Y25),20,bike_tt_hours,10631.509782747511
+Stage 1,Late opening (> Y25),21,bike_tt_hours,10750.854181344388
+Stage 1,Late opening (> Y25),22,bike_tt_hours,10870.117256499103
+Stage 1,Late opening (> Y25),23,bike_tt_hours,10980.999979813878
+Stage 1,Late opening (> Y25),24,bike_tt_hours,11088.140289078132
+Stage 1,Late opening (> Y25),25,bike_tt_hours,11193.03187384739
+Stage 1,Late opening (> Y25),26,bike_tt_hours,11295.344513036725
+Stage 1,Late opening (> Y25),27,bike_tt_hours,11394.980961830363
+Stage 1,Late opening (> Y25),28,bike_tt_hours,11479.334563328866
+Stage 1,Late opening (> Y25),29,bike_tt_hours,11567.902673014341
+Stage 1,Late opening (> Y25),30,bike_tt_hours,11584.145349593484
+Stage 1,Late opening (> Y25),31,bike_tt_hours,11654.302677390198
+Stage 1,Late opening (> Y25),32,bike_tt_hours,11741.670733594638
+Stage 1,Late opening (> Y25),33,bike_tt_hours,11827.972424876581
+Stage 1,Late opening (> Y25),34,bike_tt_hours,11912.358504899901
+Stage 1,Late opening (> Y25),35,bike_tt_hours,11990.536353910531
+Stage 1,Late opening (> Y25),36,bike_tt_hours,12067.685197811013
+Stage 1,Late opening (> Y25),37,bike_tt_hours,12144.018595753423
+Stage 1,Late opening (> Y25),38,bike_tt_hours,12219.768443390258
+Stage 1,Late opening (> Y25),39,bike_tt_hours,12306.438162180508
+Stage 1,Late opening (> Y25),40,bike_tt_hours,12381.765499513847
+Stage 2,No opening,1,bike_trips,38359.87882543197
+Stage 2,No opening,2,bike_trips,38630.45481724573
+Stage 2,No opening,3,bike_trips,38903.7341613246
+Stage 2,No opening,4,bike_trips,39180.46869230796
+Stage 2,No opening,5,bike_trips,39460.848870945454
+Stage 2,No opening,6,bike_trips,39742.85912424806
+Stage 2,No opening,7,bike_trips,40028.94314584463
+Stage 2,No opening,8,bike_trips,40325.36118767337
+Stage 2,No opening,9,bike_trips,40634.392277554056
+Stage 2,No opening,10,bike_trips,40951.10794894766
+Stage 2,No opening,11,bike_trips,41250.76824972161
+Stage 2,No opening,12,bike_trips,41598.97702572449
+Stage 2,No opening,13,bike_trips,41967.95900910998
+Stage 2,No opening,14,bike_trips,42360.77325520844
+Stage 2,No opening,15,bike_trips,42780.030299607824
+Stage 2,No opening,16,bike_trips,43274.007673996166
+Stage 2,No opening,17,bike_trips,43733.29692320655
+Stage 2,No opening,18,bike_trips,44205.110022007786
+Stage 2,No opening,19,bike_trips,44712.75378035031
+Stage 2,No opening,20,bike_trips,45218.246522269474
+Stage 2,No opening,21,bike_trips,45731.70204181057
+Stage 2,No opening,22,bike_trips,46242.74134439247
+Stage 2,No opening,23,bike_trips,46768.289070734376
+Stage 2,No opening,24,bike_trips,47244.200185781156
+Stage 2,No opening,25,bike_trips,47719.21491105047
+Stage 2,No opening,26,bike_trips,48239.93079975674
+Stage 2,No opening,27,bike_trips,48717.260286671604
+Stage 2,No opening,28,bike_trips,49152.67158109501
+Stage 2,No opening,29,bike_trips,49549.31077573933
+Stage 2,No opening,30,bike_trips,52380.640799767956
+Stage 2,No opening,31,bike_trips,52786.27274305177
+Stage 2,No opening,32,bike_trips,53162.75506577932
+Stage 2,No opening,33,bike_trips,53543.55678844611
+Stage 2,No opening,34,bike_trips,53919.39402945971
+Stage 2,No opening,35,bike_trips,54238.59428812771
+Stage 2,No opening,36,bike_trips,54587.69296609023
+Stage 2,No opening,37,bike_trips,54942.60706094716
+Stage 2,No opening,38,bike_trips,55346.6558392519
+Stage 2,No opening,39,bike_trips,55653.52808624211
+Stage 2,No opening,40,bike_trips,55959.00373704081
+Stage 2,No opening,1,bike_tt_hours,8999.437706238741
+Stage 2,No opening,2,bike_tt_hours,9063.687715173757
+Stage 2,No opening,3,bike_tt_hours,9128.311106729923
+Stage 2,No opening,4,bike_tt_hours,9193.427411951932
+Stage 2,No opening,5,bike_tt_hours,9259.188672450453
+Stage 2,No opening,6,bike_tt_hours,9325.91825388106
+Stage 2,No opening,7,bike_tt_hours,9394.105425131507
+Stage 2,No opening,8,bike_tt_hours,9463.966512903793
+Stage 2,No opening,9,bike_tt_hours,9535.867333046644
+Stage 2,No opening,10,bike_tt_hours,9608.860306705525
+Stage 2,No opening,11,bike_tt_hours,9684.745940615692
+Stage 2,No opening,12,bike_tt_hours,9765.123362400333
+Stage 2,No opening,13,bike_tt_hours,9848.670190403433
+Stage 2,No opening,14,bike_tt_hours,9930.570198264999
+Stage 2,No opening,15,bike_tt_hours,10022.605262262177
+Stage 2,No opening,16,bike_tt_hours,10119.888992844682
+Stage 2,No opening,17,bike_tt_hours,10222.468547598617
+Stage 2,No opening,18,bike_tt_hours,10340.647543099478
+Stage 2,No opening,19,bike_tt_hours,10465.819266455526
+Stage 2,No opening,20,bike_tt_hours,10584.044810245257
+Stage 2,No opening,21,bike_tt_hours,10692.960137322838
+Stage 2,No opening,22,bike_tt_hours,10801.053298676305
+Stage 2,No opening,23,bike_tt_hours,10908.140898974767
+Stage 2,No opening,24,bike_tt_hours,11014.44581829375
+Stage 2,No opening,25,bike_tt_hours,11121.680278726666
+Stage 2,No opening,26,bike_tt_hours,11224.299486559736
+Stage 2,No opening,27,bike_tt_hours,11322.129289604647
+Stage 2,No opening,28,bike_tt_hours,11415.305159465668
+Stage 2,No opening,29,bike_tt_hours,11498.479391150446
+Stage 2,No opening,30,bike_tt_hours,11523.090453287896
+Stage 2,No opening,31,bike_tt_hours,11556.718299886772
+Stage 2,No opening,32,bike_tt_hours,11634.50820618706
+Stage 2,No opening,33,bike_tt_hours,11713.81772313091
+Stage 2,No opening,34,bike_tt_hours,11795.223688830074
+Stage 2,No opening,35,bike_tt_hours,11875.947152935492
+Stage 2,No opening,36,bike_tt_hours,11956.169203436186
+Stage 2,No opening,37,bike_tt_hours,12036.038607298475
+Stage 2,No opening,38,bike_tt_hours,12115.676022895435
+Stage 2,No opening,39,bike_tt_hours,12192.756104848931
+Stage 2,No opening,40,bike_tt_hours,12262.951088436002
+Stage 2,Late opening (> Y25),1,bike_trips,38359.87882543197
+Stage 2,Late opening (> Y25),2,bike_trips,38959.507904228616
+Stage 2,Late opening (> Y25),3,bike_trips,39563.61315860575
+Stage 2,Late opening (> Y25),4,bike_trips,40172.58834445073
+Stage 2,Late opening (> Y25),5,bike_trips,40786.9373400744
+Stage 2,Late opening (> Y25),6,bike_trips,41409.801778739056
+Stage 2,Late opening (> Y25),7,bike_trips,42045.07434687262
+Stage 2,Late opening (> Y25),8,bike_trips,42683.42511044176
+Stage 2,Late opening (> Y25),9,bike_trips,43351.25764185332
+Stage 2,Late opening (> Y25),10,bike_trips,44027.90699111531
+Stage 2,Late opening (> Y25),11,bike_trips,44722.299903812454
+Stage 2,Late opening (> Y25),12,bike_trips,45438.24041318336
+Stage 2,Late opening (> Y25),13,bike_trips,46191.633750727604
+Stage 2,Late opening (> Y25),14,bike_trips,47012.73903517325
+Stage 2,Late opening (> Y25),15,bike_trips,47880.25260865345
+Stage 2,Late opening (> Y25),16,bike_trips,48797.3116634925
+Stage 2,Late opening (> Y25),17,bike_trips,49739.74786994843
+Stage 2,Late opening (> Y25),18,bike_trips,50715.85417889582
+Stage 2,Late opening (> Y25),19,bike_trips,51728.54573308068
+Stage 2,Late opening (> Y25),20,bike_trips,52799.8185654207
+Stage 2,Late opening (> Y25),21,bike_trips,53819.27782625434
+Stage 2,Late opening (> Y25),22,bike_trips,57078.53919941645
+Stage 2,Late opening (> Y25),23,bike_trips,58742.46158540107
+Stage 2,Late opening (> Y25),24,bike_trips,59903.32623584536
+Stage 2,Late opening (> Y25),25,bike_trips,61034.128357804475
+Stage 2,Late opening (> Y25),26,bike_trips,62120.69277311642
+Stage 2,Late opening (> Y25),27,bike_trips,63175.45323018191
+Stage 2,Late opening (> Y25),28,bike_trips,64190.51699830566
+Stage 2,Late opening (> Y25),29,bike_trips,65177.08792470732
+Stage 2,Late opening (> Y25),30,bike_trips,66163.49182454498
+Stage 2,Late opening (> Y25),31,bike_trips,67116.89923163332
+Stage 2,Late opening (> Y25),32,bike_trips,68050.73049605482
+Stage 2,Late opening (> Y25),33,bike_trips,68962.6516849802
+Stage 2,Late opening (> Y25),34,bike_trips,69858.15532224253
+Stage 2,Late opening (> Y25),35,bike_trips,70745.13770143688
+Stage 2,Late opening (> Y25),36,bike_trips,71626.18722453307
+Stage 2,Late opening (> Y25),37,bike_trips,73561.7813171849
+Stage 2,Late opening (> Y25),38,bike_trips,74441.84239121158
+Stage 2,Late opening (> Y25),39,bike_trips,75321.37215555544
+Stage 2,Late opening (> Y25),40,bike_trips,76201.4671637738
+Stage 2,Late opening (> Y25),1,bike_tt_hours,8999.437706238741
+Stage 2,Late opening (> Y25),2,bike_tt_hours,9144.321917213369
+Stage 2,Late opening (> Y25),3,bike_tt_hours,9290.519278536769
+Stage 2,Late opening (> Y25),4,bike_tt_hours,9438.12250905523
+Stage 2,Late opening (> Y25),5,bike_tt_hours,9587.249810628222
+Stage 2,Late opening (> Y25),6,bike_tt_hours,9738.05084808963
+Stage 2,Late opening (> Y25),7,bike_tt_hours,9890.71345084244
+Stage 2,Late opening (> Y25),8,bike_tt_hours,10045.470630437132
+Stage 2,Late opening (> Y25),9,bike_tt_hours,10202.607087321556
+Stage 2,Late opening (> Y25),10,bike_tt_hours,10362.463751151552
+Stage 2,Late opening (> Y25),11,bike_tt_hours,10525.438047775193
+Stage 2,Late opening (> Y25),12,bike_tt_hours,10691.976586909173
+Stage 2,Late opening (> Y25),13,bike_tt_hours,10862.556074496164
+Stage 2,Late opening (> Y25),14,bike_tt_hours,11037.648019761427
+Stage 2,Late opening (> Y25),15,bike_tt_hours,11232.15680067295
+Stage 2,Late opening (> Y25),16,bike_tt_hours,11446.778411761115
+Stage 2,Late opening (> Y25),17,bike_tt_hours,11665.167488702547
+Stage 2,Late opening (> Y25),18,bike_tt_hours,11878.087437089007
+Stage 2,Late opening (> Y25),19,bike_tt_hours,12123.85433812908
+Stage 2,Late opening (> Y25),20,bike_tt_hours,12377.328068482862
+Stage 2,Late opening (> Y25),21,bike_tt_hours,12634.17198033322
+Stage 2,Late opening (> Y25),22,bike_tt_hours,12792.48858844622
+Stage 2,Late opening (> Y25),23,bike_tt_hours,12953.914062751888
+Stage 2,Late opening (> Y25),24,bike_tt_hours,13193.744220296667
+Stage 2,Late opening (> Y25),25,bike_tt_hours,13428.34441700188
+Stage 2,Late opening (> Y25),26,bike_tt_hours,13657.92681061489
+Stage 2,Late opening (> Y25),27,bike_tt_hours,13881.347652003635
+Stage 2,Late opening (> Y25),28,bike_tt_hours,14098.848733286191
+Stage 2,Late opening (> Y25),29,bike_tt_hours,14310.981137951121
+Stage 2,Late opening (> Y25),30,bike_tt_hours,14518.467540887894
+Stage 2,Late opening (> Y25),31,bike_tt_hours,14722.092631416494
+Stage 2,Late opening (> Y25),32,bike_tt_hours,14922.626809072819
+Stage 2,Late opening (> Y25),33,bike_tt_hours,15120.779924523888
+Stage 2,Late opening (> Y25),34,bike_tt_hours,15317.178244195728
+Stage 2,Late opening (> Y25),35,bike_tt_hours,15389.885321014837
+Stage 2,Late opening (> Y25),36,bike_tt_hours,15548.093512994901
+Stage 2,Late opening (> Y25),37,bike_tt_hours,15702.418105838842
+Stage 2,Late opening (> Y25),38,bike_tt_hours,15890.057723331223
+Stage 2,Late opening (> Y25),39,bike_tt_hours,16077.656132272861
+Stage 2,Late opening (> Y25),40,bike_tt_hours,16265.394744696026

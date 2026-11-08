@@ -175,18 +175,10 @@ globals().update(NOMINAL_PARAMS)
 # -----------------------------------------------------------------------------
 # OPTION A: Define by Municipalities / Regions (Empty when in "zones" mode)
 # -----------------------------------------------------------------------------
-CORRIDOR_REGIONS = {  # Named municipality groups defining the modeled corridor.
-    "Zürich": ["Zürich"],
-    "Limmattal": [
-        "Schlieren", "Unterengstringen", "Oberengstringen", "Dietikon",
-        "Geroldswil", "Weiningen (ZH)", "Urdorf", "Oetwil an der Limmat",
-    ],
-}
+CORRIDOR_REGIONS = {}  # Removed all zones for zones mode
 
 # Flat list of all corridor municipalities
-CORRIDOR_MUNICIPALITIES = [  # Derived flat list used by corridor selection and stage definitions.
-    muni for munis in CORRIDOR_REGIONS.values() for muni in munis
-]
+CORRIDOR_MUNICIPALITIES = []
 
 # Optional project-relative or absolute detailed road-network cache path.
 # Notebook 02 prepares a missing cache; later notebooks require it to exist.

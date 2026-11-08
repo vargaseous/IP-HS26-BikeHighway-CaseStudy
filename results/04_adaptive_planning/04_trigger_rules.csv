@@ -1,3 +1,3 @@
 ﻿monitoring_indicator,threshold,persistence,lead_time,name,signpost_label,description,monitoring_indicator_label
-bike_trips,30000,2,10,Trigger 1,Peak-hour bike demand,"When Peak-hour bike demand exceeds 30,000 trips/peak hour for 2 consecutive years, decide to build; open after a 10-year lead time.",Cycling passengers
-bike_trips,55000,2,10,Trigger 2,Peak-hour bike demand,"When Peak-hour bike demand exceeds 55,000 trips/peak hour for 2 consecutive years, decide to build; open after a 10-year lead time.",Cycling passengers
+bike_trips,44000,2,10,Trigger 1,Peak-hour bike demand,"When Peak-hour bike demand exceeds 44,000 trips/peak hour for 2 consecutive years, decide to build; open after a 10-year lead time.",Cycling passengers
+bike_trips,60000,2,10,Trigger 2,Peak-hour bike demand,"When Peak-hour bike demand exceeds 60,000 trips/peak hour for 2 consecutive years, decide to build; open after a 10-year lead time.",Cycling passengers
