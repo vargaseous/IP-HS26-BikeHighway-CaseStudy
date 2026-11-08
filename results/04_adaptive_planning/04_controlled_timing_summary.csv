@@ -1,7 +1,7 @@
-﻿shape,parameter,endpoint,failure_years,bike_share_trips_failure_years,bike_share_trips_first_failure_year,package_1_decision_year,package_1_opening_year,package_2_decision_year,package_2_opening_year,discounted_expenditure_MCHF
-linear,PASSENGER_DEMAND_GROWTH,0.21462074767123435,6,6,20,16,26,,,25.45915425826678
-early,PASSENGER_DEMAND_GROWTH,0.21462074767123435,1,1,20,10,20,,,30.196023189469567
-late,PASSENGER_DEMAND_GROWTH,0.21462074767123435,13,13,20,23,33,,,20.59923264324788
-logistic,PASSENGER_DEMAND_GROWTH,0.21462074767123435,9,9,20,19,29,,,23.293600180418068
-almost_flat,PASSENGER_DEMAND_GROWTH,0.21462074767123435,14,14,20,30,40,,,16.368378414027408
-random_walk,PASSENGER_DEMAND_GROWTH,0.21462074767123435,7,7,20,17,27,,,24.72296210606648
+﻿shape,parameter,endpoint,failure_years,bike_share_failure_years,bike_share_first_failure_year,bike_share_trips_failure_years,bike_share_trips_first_failure_year,bike_dist_km_failure_years,bike_dist_km_first_failure_year,package_1_decision_year,package_1_opening_year,package_2_decision_year,package_2_opening_year,discounted_expenditure_MCHF
+linear,PASSENGER_DEMAND_GROWTH,0.21462074767123435,12,0,,0,,12,1,16,26,,,25.45915425826678
+early,PASSENGER_DEMAND_GROWTH,0.21462074767123435,6,0,,0,,6,1,10,20,,,30.196023189469567
+late,PASSENGER_DEMAND_GROWTH,0.21462074767123435,18,0,,0,,18,1,23,33,,,20.59923264324788
+logistic,PASSENGER_DEMAND_GROWTH,0.21462074767123435,15,0,,0,,15,1,19,29,,,23.293600180418068
+almost_flat,PASSENGER_DEMAND_GROWTH,0.21462074767123435,22,0,,0,,22,1,30,40,,,16.368378414027408
+random_walk,PASSENGER_DEMAND_GROWTH,0.21462074767123435,13,0,,0,,13,1,17,27,,,24.72296210606648

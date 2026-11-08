@@ -1,5 +1,5 @@
 ﻿configuration,initial_shortfall_percent,all_requirements_met_percent,mean_failure_years,median_first_failure_year_among_failures
-Stage 0 – Baseline Network,0.0,27.5,10.42,20.0
-Stage 1 – Bike Highway Zürich-Schlieren,0.0,50.0,7.6,20.0
-Stage 2 - Additional underpasses,0.0,36.0,9.13,20.0
-Both stages,0.0,58.0,6.78,20.0
+Stage 0 – Baseline Network,100.0,0.0,19.61,1.0
+Stage 1 – Bike Highway Zürich-Schlieren,100.0,0.0,14.58,1.0
+Stage 2 - Additional underpasses,100.0,0.0,16.99,1.0
+Both stages,100.0,0.0,11.64,1.0

@@ -1,5 +1,5 @@
 ﻿,minimum,maximum,favourable_direction,bottom_value,top_value
-pct_acceptable_years,47.5,100.0,higher,47.5,100.0
+pct_acceptable_years,0.0,90.0,higher,0.0,90.0
 delta_final_bike_share_pp,0.0,1.1374410442879401,higher,0.0,1.1374410442879401
 delta_final_bike_tt_hours,-718.4453936053978,0.0,lower,0.0,-718.4453936053978
 delta_cumulative_bike_dist_km,0.0,510310.8010521503,higher,0.0,510310.8010521503

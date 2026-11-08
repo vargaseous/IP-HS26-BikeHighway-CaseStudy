@@ -1,3 +1,7 @@
 ﻿requirement,plan,box_source,density_in_plan,coverage_in_plan
-1: bike_share_trips > 0.2,baseline,baseline,1.0,0.8068965517241379
-1: bike_share_trips > 0.2,adaptive,adaptive,1.0,0.8068965517241379
+1: bike_share > 0.1,baseline,baseline,1.0,0.6352941176470588
+1: bike_share > 0.1,adaptive,adaptive,1.0,0.6352941176470588
+2: bike_share_trips > 0.17,baseline,baseline,1.0,0.6666666666666666
+2: bike_share_trips > 0.17,adaptive,adaptive,1.0,0.8076923076923077
+3: bike_dist_km > 150000,baseline,none,,
+3: bike_dist_km > 150000,adaptive,none,,

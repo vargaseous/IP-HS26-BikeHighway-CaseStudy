@@ -1,10 +1,28 @@
 ﻿comparison,monitoring_indicator,outcome,monitoring_unit,outcome_unit,n,r_squared,slope,spearman_r,outcome_range
+baseline,pt_trips,bike_share,person-trips/peak hour,%,40,0.662,-8.976e-04,-0.8122,5.0279
 baseline,pt_trips,bike_share_trips,person-trips/peak hour,%,40,0.6963,-1.365e-03,-0.833,7.7153
+baseline,pt_trips,bike_dist_km,person-trips/peak hour,bike-km/peak hour,40,0.5738,-1.228e+01,-0.7645,78669.2421
+baseline,bike_trips,bike_share,person-trips/peak hour,%,40,0.9523,5.922e-04,0.9651,5.0279
 baseline,bike_trips,bike_share_trips,person-trips/peak hour,%,40,0.9735,8.877e-04,0.9805,7.7153
+baseline,bike_trips,bike_dist_km,person-trips/peak hour,bike-km/peak hour,40,0.9825,8.839e+00,0.9876,78669.2421
+baseline,congestion_delay_hours,bike_share,person-hours/year,%,40,0.0812,-7.331e-06,-0.2165,5.0279
 baseline,congestion_delay_hours,bike_share_trips,person-hours/year,%,40,0.1157,-1.297e-05,-0.258,7.7153
+baseline,congestion_delay_hours,bike_dist_km,person-hours/year,bike-km/peak hour,40,0.0407,-7.630e-02,-0.1201,78669.2421
+stage1_change,pt_trips,bike_share,person-trips/peak hour,percentage points,40,0.6938,-2.887e-05,-0.824,0.1625
 stage1_change,pt_trips,bike_share_trips,person-trips/peak hour,percentage points,40,0.5872,-2.757e-05,-0.755,0.1649
+stage1_change,pt_trips,bike_dist_km,person-trips/peak hour,bike-km/peak hour,40,0.305,-1.449e-01,-0.5799,1387.3565
+stage1_change,bike_trips,bike_share,person-trips/peak hour,percentage points,40,0.9481,1.857e-05,0.9771,0.1625
 stage1_change,bike_trips,bike_share_trips,person-trips/peak hour,percentage points,40,0.77,1.737e-05,0.8955,0.1649
+stage1_change,bike_trips,bike_dist_km,person-trips/peak hour,bike-km/peak hour,40,0.7807,1.275e-01,0.9174,1387.3565
+stage1_change,congestion_delay_hours,bike_share,person-hours/year,percentage points,40,0.1017,-2.578e-07,-0.2486,0.1625
 stage1_change,congestion_delay_hours,bike_share_trips,person-hours/year,percentage points,40,0.0986,-2.634e-07,-0.2163,0.1649
+stage1_change,congestion_delay_hours,bike_dist_km,person-hours/year,bike-km/peak hour,40,0.0007,1.572e-04,0.082,1387.3565
+stage2_change,pt_trips,bike_share,person-trips/peak hour,percentage points,40,0.6808,-1.441e-05,-0.8205,0.0808
 stage2_change,pt_trips,bike_share_trips,person-trips/peak hour,percentage points,40,0.61,-1.453e-05,-0.7632,0.0862
+stage2_change,pt_trips,bike_dist_km,person-trips/peak hour,bike-km/peak hour,40,0.4575,-1.576e-01,-0.6822,1161.5848
+stage2_change,bike_trips,bike_share,person-trips/peak hour,percentage points,40,0.9703,9.465e-06,0.9835,0.0808
 stage2_change,bike_trips,bike_share_trips,person-trips/peak hour,percentage points,40,0.8182,9.254e-06,0.9178,0.0862
+stage2_change,bike_trips,bike_dist_km,person-trips/peak hour,bike-km/peak hour,40,0.9495,1.249e-01,0.979,1161.5848
+stage2_change,congestion_delay_hours,bike_share,person-hours/year,percentage points,40,0.0935,-1.246e-07,-0.2332,0.0808
 stage2_change,congestion_delay_hours,bike_share_trips,person-hours/year,percentage points,40,0.0984,-1.360e-07,-0.225,0.0862
+stage2_change,congestion_delay_hours,bike_dist_km,person-hours/year,bike-km/peak hour,40,0.0105,-5.575e-04,-0.0621,1161.5848

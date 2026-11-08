@@ -1,5 +1,13 @@
 ﻿requirement,failure_percent,mean_failure_years,configuration
-Cycling trip share > 20 % (Years 20–40),72.5,10.42,Stage 0 – Baseline Network
-Cycling trip share > 20 % (Years 20–40),50.0,7.6,Stage 1 – Bike Highway Zürich-Schlieren
-Cycling trip share > 20 % (Years 20–40),64.0,9.13,Stage 2 - Additional underpasses
-Cycling trip share > 20 % (Years 20–40),42.0,6.78,Both stages
+Cycling share (strategic PKM) > 10 % (Years 20–40),42.5,4.58,Stage 0 – Baseline Network
+Cycling trip share > 17 % (Years 20–40),13.5,2.44,Stage 0 – Baseline Network
+Cycling distance > 150000 bike-km/peak hour (Years 1–40),100.0,17.22,Stage 0 – Baseline Network
+Cycling share (strategic PKM) > 10 % (Years 20–40),21.5,2.45,Stage 1 – Bike Highway Zürich-Schlieren
+Cycling trip share > 17 % (Years 20–40),8.0,1.12,Stage 1 – Bike Highway Zürich-Schlieren
+Cycling distance > 150000 bike-km/peak hour (Years 1–40),100.0,13.04,Stage 1 – Bike Highway Zürich-Schlieren
+Cycling share (strategic PKM) > 10 % (Years 20–40),32.0,3.47,Stage 2 - Additional underpasses
+Cycling trip share > 17 % (Years 20–40),11.0,1.83,Stage 2 - Additional underpasses
+Cycling distance > 150000 bike-km/peak hour (Years 1–40),100.0,14.74,Stage 2 - Additional underpasses
+Cycling share (strategic PKM) > 10 % (Years 20–40),15.0,1.63,Both stages
+Cycling trip share > 17 % (Years 20–40),7.0,0.77,Both stages
+Cycling distance > 150000 bike-km/peak hour (Years 1–40),100.0,10.54,Both stages
