@@ -1,0 +1,6 @@
+﻿Check,Result,Criterion,Status
+Total annual-benefit error,0.30%,≤ 2.0%,Pass
+Transport outputs,Saved OD and physical-output checks,All recorded limits met,Warning
+Assignment reference convergence,Saved reference runs,Recorded convergence target met,Pass
+Material benefit-sign errors,0,≤ 0,Pass
+Large annual-benefit errors (P95),CHF 0.51m/year,≤ CHF 13.03m/year,Pass

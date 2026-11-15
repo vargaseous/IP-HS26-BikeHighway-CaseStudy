@@ -1,0 +1,19 @@
+﻿plan,requirement,scenarios_meeting_requirement_percent,mean_failure_years
+baseline,"bike_share > 0.12, Years 20–40",8.5,12.83
+static1,"bike_share > 0.12, Years 20–40",20.0,10.22
+static2,"bike_share > 0.12, Years 20–40",24.5,8.9
+staged1,"bike_share > 0.12, Years 20–40",24.5,8.9
+staged2,"bike_share > 0.12, Years 20–40",24.5,8.9
+flexible,"bike_share > 0.12, Years 20–40",8.5,11.35
+baseline,"bike_share_trips > 0.2, Years 20–40",27.500000000000004,10.425
+static1,"bike_share_trips > 0.2, Years 20–40",50.0,7.595
+static2,"bike_share_trips > 0.2, Years 20–40",57.99999999999999,6.78
+staged1,"bike_share_trips > 0.2, Years 20–40",57.99999999999999,6.78
+staged2,"bike_share_trips > 0.2, Years 20–40",57.99999999999999,6.78
+flexible,"bike_share_trips > 0.2, Years 20–40",27.500000000000004,9.34
+baseline,"bike_dist_km > 200000, Years 1–40",0.0,33.46
+static1,"bike_dist_km > 200000, Years 1–40",0.0,31.78
+static2,"bike_dist_km > 200000, Years 1–40",0.0,30.69
+staged1,"bike_dist_km > 200000, Years 1–40",0.0,30.69
+staged2,"bike_dist_km > 200000, Years 1–40",0.0,30.69
+flexible,"bike_dist_km > 200000, Years 1–40",0.0,32.025
