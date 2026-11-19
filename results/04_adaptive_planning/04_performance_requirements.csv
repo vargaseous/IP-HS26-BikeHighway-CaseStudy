@@ -1,2 +1,3 @@
-﻿indicator,operator,threshold,start_year
+indicator,operator,threshold,start_year
 bike_share_trips,>,0.2,20
+bike_dist_km,>,150000,20

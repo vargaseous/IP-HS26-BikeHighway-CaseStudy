@@ -3392,6 +3392,9 @@ def load_detailed_corridor_network(
         try:
             ox.settings.timeout = 600
             ox.settings.memory = 1073741824
+            ox.settings.http_user_agent = "IP-HS26-case-study/1.0 (ETH Zurich course exercise)"
+            ox.settings.requests_kwargs = {"headers": {"User-Agent": "IP-HS26-case-study/1.0 (ETH Zurich course exercise)"}}
+            ox.settings.overpass_rate_limit = False
         except Exception:
             pass
     except ImportError:
