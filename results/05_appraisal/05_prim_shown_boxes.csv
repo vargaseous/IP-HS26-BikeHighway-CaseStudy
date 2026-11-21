@@ -1,13 +1,13 @@
 ﻿mechanism,plan,box_source,density_in_plan,coverage_in_plan
 negative_npv,staged1,none,,
 negative_npv,static2,none,,
-negative_npv,flexible,Plan PRIM box,0.7962962962962963,0.8113207547169812
+negative_npv,flexible,Plan PRIM box,0.9,0.5
 requirement_1,staged1,Plan PRIM box,0.8611111111111112,0.9935897435897436
 requirement_1,static2,Plan PRIM box,0.8611111111111112,0.9935897435897436
-requirement_1,flexible,Plan PRIM box,0.9666666666666667,0.9720670391061452
+requirement_1,flexible,Plan PRIM box,0.9055555555555556,0.9939024390243902
 requirement_2,staged1,Plan PRIM box,0.7910447761194029,0.9636363636363636
 requirement_2,static2,Plan PRIM box,0.7910447761194029,0.9636363636363636
-requirement_2,flexible,Plan PRIM box,0.8761904761904762,0.989247311827957
+requirement_2,flexible,Plan PRIM box,0.7857142857142857,0.9428571428571428
 requirement_3,staged1,none,,
 requirement_3,static2,none,,
 requirement_3,flexible,none,,

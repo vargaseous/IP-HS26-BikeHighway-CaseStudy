@@ -1,0 +1,33 @@
+{
+ "tag": "scenario_trig5_nodist",
+ "timestamp": "2026-11-21T11:15:41",
+ "year1_baseline_bike_trips": 17212.18,
+ "triggers": {
+  "T1": 18070,
+  "T1_pct": "+5%",
+  "T2": 25820,
+  "T2_pct": "+50%",
+  "persistence": [
+   3,
+   3
+  ],
+  "lead_time": [
+   5,
+   3
+  ]
+ },
+ "requirements": [
+  {
+   "indicator": "bike_share",
+   "operator": ">",
+   "threshold": 0.12,
+   "start_year": 20
+  },
+  {
+   "indicator": "bike_share_trips",
+   "operator": ">",
+   "threshold": 0.2,
+   "start_year": 20
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+ "tag": "scenario_staged25",
+ "timestamp": "2026-11-21T12:15:30",
+ "plan_change": {
+  "file": "code/adaptive_planning.py PLAN_DEFINITIONS",
+  "staged1.tunnel.opening_year": {
+   "from": 11,
+   "to": 15
+  },
+  "staged2.tunnel.opening_year": {
+   "from": 15,
+   "to": 25
+  }
+ },
+ "parameters_changed": {
+  "OPEX_RATE": 0.04,
+  "DISCOUNT_RATE": 0.04
+ },
+ "triggers": {
+  "T1": 18070,
+  "T1_pct": "+5% of Y1=17212",
+  "T2": 25820,
+  "T2_pct": "+50%",
+  "persistence": [
+   3,
+   3
+  ],
+  "lead_time": [
+   5,
+   3
+  ]
+ },
+ "requirements": [
+  {
+   "indicator": "bike_share",
+   "operator": ">",
+   "threshold": 0.12,
+   "start_year": 20
+  },
+  {
+   "indicator": "bike_share_trips",
+   "operator": ">",
+   "threshold": 0.2,
+   "start_year": 20
+  },
+  {
+   "indicator": "bike_dist_km",
+   "operator": ">",
+   "threshold": 50000,
+   "start_year": 20
+  }
+ ]
+}

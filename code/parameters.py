@@ -41,7 +41,7 @@ NOMINAL_PARAMS = {
     # -------------------------------------------------------------------------
     "N_YEARS": 40,  # Appraisal horizon (years); *_Y40 denotes its final-year endpoint.
     "APPRAISAL_START_YEAR": 2026,  # Calendar year represented by Year 1 of the appraisal.
-    "DISCOUNT_RATE": 0.02,  # Annual social discount rate; 0.02 means 2%.
+    "DISCOUNT_RATE": 0.04,  # 2026-11-21: stress-test 4% to punish early capex (was 0.02)
 
     # -------------------------------------------------------------------------
     # Passenger demand, transport preferences, cycling and background traffic
@@ -101,7 +101,7 @@ NOMINAL_PARAMS = {
     "C_TT_PT_ACCESS": 26.52,  # PT access and egress walking/cycling time value (CHF/person-hour).
     "C_TT_PT_TRANSFER": 26.52,  # Physical transfer-walking time value (CHF/person-hour); excludes waiting.
     # Active-mode time is valued per person-hour, like PT/car passenger time.
-    "C_TT_BIKE": 35.0,  # Cycling value of time (CHF/person-hour)
+    "C_TT_BIKE": 18.7,  # 2026-11-21: lowered from 35.0 to test sensitivity of cycling time savings in NPV
     "C_TT_WALK": 16.0,  # Walking value of time (CHF/person-hour)
     "C_TT_BIKE_LANE": 24.5, # Cycling value of time on a separated bike lane (CHF/person-hour); 34% lower than cycling on a shared road; new
     # -------------------------------------------------------------------------
@@ -148,7 +148,7 @@ NOMINAL_PARAMS = {
     # Shared operation, investment multipliers and flexibility options
     # -------------------------------------------------------------------------
     # Package-specific CAPEX is defined in stages.py, alongside each intervention.
-    "OPEX_RATE": 0.02,  # Annual infrastructure operating/maintenance cost as a fraction of base construction cost.
+    "OPEX_RATE": 0.04,  # 2026-11-21: 4% per KPMG analysis of Swiss opex rates (rounded up from 0.3x%); was 0.02
     "OPEX_MULTIPLIER": 1.0,  # Multiplier on annual infrastructure operating/maintenance costs.
     "CAPEX_MULTIPLIER": 1.0,  # Multiplier on construction costs and upfront option premiums.
     # Flexibility Premium (for pre-engineering or reservation)

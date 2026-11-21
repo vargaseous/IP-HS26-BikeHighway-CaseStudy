@@ -1,0 +1,10 @@
+﻿mechanism,plan,scenarios,failures,failure_share,status,accepted,density,coverage,selected_step,density_threshold
+negative_npv,staged1,200,0,0.0,No failures,False,,,,0.75
+negative_npv,static2,200,0,0.0,No failures,False,,,,0.75
+negative_npv,flexible,200,18,0.09,Qualifying box,True,0.9,0.5,25.0,0.75
+requirement_1,staged1,200,156,0.78,Qualifying box,True,0.8611111111111112,0.9935897435897436,1.0,0.75
+requirement_1,static2,200,156,0.78,Qualifying box,True,0.8611111111111112,0.9935897435897436,1.0,0.75
+requirement_1,flexible,200,164,0.82,Qualifying box,True,0.9055555555555556,0.9939024390243902,1.0,0.75
+requirement_2,staged1,200,55,0.275,Qualifying box,True,0.7910447761194029,0.9636363636363636,10.0,0.75
+requirement_2,static2,200,55,0.275,Qualifying box,True,0.7910447761194029,0.9636363636363636,10.0,0.75
+requirement_2,flexible,200,70,0.35,Qualifying box,True,0.7857142857142857,0.9428571428571428,8.0,0.75

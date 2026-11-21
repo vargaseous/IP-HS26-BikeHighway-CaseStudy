@@ -1,0 +1,11 @@
+{
+ "tag": "scenario_ctt_bike_18_7",
+ "timestamp": "2026-11-21T12:26:55",
+ "parameters_changed": {
+  "C_TT_BIKE": {
+   "from": 35.0,
+   "to": 18.7
+  }
+ },
+ "carried_from": "scenario_staged25 (OPEX_RATE=0.04, DISCOUNT_RATE=0.04, staged1 tunnel@15, staged2 tunnel@25, triggers +5%/+50%, dist>50k)"
+}

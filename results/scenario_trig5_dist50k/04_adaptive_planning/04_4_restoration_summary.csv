@@ -1,0 +1,5 @@
+﻿transition,scenarios_with_window,with_window_percent,reachable_window_percent,mean_restorable_years,median_last_restoration_decision
+Stage 0 – Baseline Network → Stage 1 – Bike Highway Zürich-Schlieren,112,56.0,56.0,1.7,20.5
+Stage 0 – Baseline Network → Stage 2 - Additional underpasses,90,45.0,45.0,0.66,22.0
+Stage 1 – Bike Highway Zürich-Schlieren → Both stages,94,47.0,47.0,0.88,21.5
+Stage 2 - Additional underpasses → Both stages,111,55.5,55.5,1.93,20.0

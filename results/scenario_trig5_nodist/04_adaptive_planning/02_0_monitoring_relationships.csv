@@ -1,0 +1,19 @@
+﻿comparison,monitoring_indicator,outcome,monitoring_unit,outcome_unit,n,r_squared,slope,spearman_r,outcome_range
+baseline,pt_trips,bike_share,person-trips/peak hour,%,40,0.0587,-3.898e-04,-0.2381,5.5166
+baseline,pt_trips,bike_share_trips,person-trips/peak hour,%,40,0.1088,-7.997e-04,-0.3233,8.147
+baseline,bike_trips,bike_share,person-trips/peak hour,%,40,0.8142,1.020e-03,0.8979,5.5166
+baseline,bike_trips,bike_share_trips,person-trips/peak hour,%,40,0.759,1.485e-03,0.8598,8.147
+baseline,congestion_delay_hours,bike_share,person-hours/year,%,40,0.0052,6.205e-07,0.0769,5.5166
+baseline,congestion_delay_hours,bike_share_trips,person-hours/year,%,40,0.0004,-2.444e-07,-0.0092,8.147
+stage1_change,pt_trips,bike_share,person-trips/peak hour,percentage points,40,0.1202,-1.027e-05,-0.3334,0.0988
+stage1_change,pt_trips,bike_share_trips,person-trips/peak hour,percentage points,40,0.1425,-2.201e-05,-0.3413,0.1983
+stage1_change,bike_trips,bike_share,person-trips/peak hour,percentage points,40,0.6614,1.694e-05,0.8105,0.0988
+stage1_change,bike_trips,bike_share_trips,person-trips/peak hour,percentage points,40,0.5928,3.155e-05,0.7735,0.1983
+stage1_change,congestion_delay_hours,bike_share,person-hours/year,percentage points,40,0.0043,-1.049e-08,-0.0561,0.0988
+stage1_change,congestion_delay_hours,bike_share_trips,person-hours/year,percentage points,40,0.0112,-3.309e-08,-0.0677,0.1983
+stage2_change,pt_trips,bike_share,person-trips/peak hour,percentage points,40,0.0295,-2.577e-06,-0.1745,0.0525
+stage2_change,pt_trips,bike_share_trips,person-trips/peak hour,percentage points,40,0.1046,-9.336e-06,-0.3045,0.0963
+stage2_change,bike_trips,bike_share,person-trips/peak hour,percentage points,40,0.8434,9.687e-06,0.9186,0.0525
+stage2_change,bike_trips,bike_share_trips,person-trips/peak hour,percentage points,40,0.6723,1.664e-05,0.8139,0.0963
+stage2_change,congestion_delay_hours,bike_share,person-hours/year,percentage points,40,0.0138,9.470e-09,0.1253,0.0525
+stage2_change,congestion_delay_hours,bike_share_trips,person-hours/year,percentage points,40,0.002,-6.895e-09,-0.0266,0.0963

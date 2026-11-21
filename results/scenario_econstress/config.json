@@ -1,0 +1,51 @@
+{
+ "tag": "scenario_econstress",
+ "timestamp": "2026-11-21T11:48:05",
+ "parameters_changed": {
+  "OPEX_RATE": {
+   "from": 0.02,
+   "to": 0.04,
+   "source": "KPMG Swiss opex analysis, rounded up"
+  },
+  "DISCOUNT_RATE": {
+   "from": 0.02,
+   "to": 0.04,
+   "source": "stress: punish early capex"
+  }
+ },
+ "triggers": {
+  "T1": 18070,
+  "T1_pct": "+5% of Y1=17212",
+  "T2": 25820,
+  "T2_pct": "+50%",
+  "persistence": [
+   3,
+   3
+  ],
+  "lead_time": [
+   5,
+   3
+  ]
+ },
+ "requirements": [
+  {
+   "indicator": "bike_share",
+   "operator": ">",
+   "threshold": 0.12,
+   "start_year": 20
+  },
+  {
+   "indicator": "bike_share_trips",
+   "operator": ">",
+   "threshold": 0.2,
+   "start_year": 20
+  },
+  {
+   "indicator": "bike_dist_km",
+   "operator": ">",
+   "threshold": 50000,
+   "start_year": 20
+  }
+ ],
+ "note": "OPEX_RATE and DISCOUNT_RATE changed; USE_CACHED_DATASET forced False for NB05 rebuild"
+}
