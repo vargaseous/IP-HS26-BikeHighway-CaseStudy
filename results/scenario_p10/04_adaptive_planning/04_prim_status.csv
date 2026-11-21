@@ -1,0 +1,9 @@
+﻿requirement,plan,scenarios,failures,failure_percent,status,accepted,density,coverage,density_threshold
+1: bike_share > 0.12,baseline,200,181,90.5,Qualifying box,True,1.0,0.8950276243093923,0.75
+1: bike_share > 0.12,adaptive,200,181,90.5,Qualifying box,True,1.0,0.8950276243093923,0.75
+2: bike_share_trips > 0.2,baseline,200,93,46.5,Qualifying box,True,1.0,0.8064516129032258,0.75
+2: bike_share_trips > 0.2,adaptive,200,93,46.5,Qualifying box,True,1.0,0.8064516129032258,0.75
+3: bike_trips > 27728,baseline,200,199,99.5,Too few cases: need 15 per class,False,,,0.75
+3: bike_trips > 27728,adaptive,200,199,99.5,Too few cases: need 15 per class,False,,,0.75
+4: bike_dist_km > 105465,baseline,200,199,99.5,Too few cases: need 15 per class,False,,,0.75
+4: bike_dist_km > 105465,adaptive,200,199,99.5,Too few cases: need 15 per class,False,,,0.75

@@ -1,0 +1,7 @@
+﻿plan,pct_acceptable_years,delta_final_bike_share_pp,delta_final_bike_tt_hours,delta_cumulative_bike_dist_km,delta_cumulative_road_delay_hours,delta_cumulative_operating_co2_tonnes,total_cost
+baseline,47.5,0.0,0.0,0.0,0.0,0.0,0.0
+static1,47.5,0.457,-59.71,90900.822,-1038905.057,-14370.037,47531393.802
+static2,53.75,0.642,-102.071,139541.606,-1517671.926,-20333.709,51639245.4
+staged1,53.75,0.642,-102.071,113049.164,-1203301.557,-15256.044,42619292.808
+staged2,53.75,0.642,-102.071,112589.323,-1209331.474,-15439.593,44494732.632
+adaptive,47.5,0.0,0.0,0.0,0.0,0.0,2000334.514

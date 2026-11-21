@@ -1,0 +1,24 @@
+{
+ "tag": "scenario_base",
+ "requirements": [
+  {
+   "indicator": "bike_share",
+   "operator": ">",
+   "threshold": 0.12,
+   "start_year": 20
+  },
+  {
+   "indicator": "bike_share_trips",
+   "operator": ">",
+   "threshold": 0.2,
+   "start_year": 20
+  },
+  {
+   "indicator": "bike_dist_km",
+   "operator": ">",
+   "threshold": 100000,
+   "start_year": 20
+  }
+ ],
+ "note": "pre-scenario baseline run (bike_dist_km>100k only extra target)"
+}

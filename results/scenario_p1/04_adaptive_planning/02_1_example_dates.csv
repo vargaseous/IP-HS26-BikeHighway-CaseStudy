@@ -1,0 +1,6 @@
+﻿scenario,failure_years,bike_share_failure_years,bike_share_first_failure_year,bike_share_trips_failure_years,bike_share_trips_first_failure_year,bike_trips_failure_years,bike_trips_first_failure_year,bike_dist_km_failure_years,bike_dist_km_first_failure_year,demand_growth_y40,BIKE_ASC_SHIFT_y40,package_1_decision_year,package_1_opening_year,package_2_decision_year,package_2_opening_year
+1. Low demand,21,19,20.0,0,,21,20.0,21,20.0,-0.08167840433800769,0.2254033307585166,,,,
+2. Rapid early growth,12,12,20.0,0,,9,20.0,9,20.0,0.295060984680808,0.2254033307585166,,,,
+3. Late acceleration,21,16,20.0,0,,21,20.0,21,20.0,0.1346640106136302,0.2254033307585166,,,,
+4. Temporary Year-15 shock,21,18,20.0,0,,21,20.0,21,20.0,-0.032667994693184904,0.2254033307585166,,,,
+5. Strong demand and preference,0,0,,0,,0,,0,,0.4541742430504416,0.8904554884989668,39.0,,,

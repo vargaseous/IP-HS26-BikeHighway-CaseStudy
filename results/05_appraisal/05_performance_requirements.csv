@@ -1,4 +1,4 @@
-indicator,operator,threshold,start_year,id,end_year,label
+﻿indicator,operator,threshold,start_year,id,end_year,label
 bike_share,>,0.12,20,requirement_1,40,"bike_share > 0.12, Years 20–40"
 bike_share_trips,>,0.2,20,requirement_2,40,"bike_share_trips > 0.2, Years 20–40"
-bike_dist_km,>,150000.0,20,requirement_3,40,"bike_dist_km > 150000, Years 20–40"
+bike_dist_km,>,100000.0,20,requirement_3,40,"bike_dist_km > 100000, Years 20–40"

@@ -1,0 +1,32 @@
+{
+ "tag": "scenario_p5",
+ "requirements": [
+  {
+   "indicator": "bike_share",
+   "operator": ">",
+   "threshold": 0.12,
+   "start_year": 20
+  },
+  {
+   "indicator": "bike_share_trips",
+   "operator": ">",
+   "threshold": 0.2,
+   "start_year": 20
+  },
+  {
+   "indicator": "bike_trips",
+   "operator": ">",
+   "threshold": 26467,
+   "start_year": 20
+  },
+  {
+   "indicator": "bike_dist_km",
+   "operator": ">",
+   "threshold": 100671,
+   "start_year": 20
+  }
+ ],
+ "pct_above_y40_median": 5,
+ "y40_median_bike_trips": 25207.0,
+ "y40_median_bike_dist_km": 95877.3
+}

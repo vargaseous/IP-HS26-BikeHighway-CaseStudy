@@ -1,0 +1,5 @@
+﻿indicator,operator,threshold,start_year
+bike_share,>,0.12,20
+bike_share_trips,>,0.2,20
+bike_trips,>,26467.0,20
+bike_dist_km,>,100671.0,20

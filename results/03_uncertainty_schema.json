@@ -1,7 +1,7 @@
 {
-  "surrogate_fingerprint": "4df2e681f93ab8960cda",
-  "surrogate_artifact_sha256": "aec260f742820a22f9aa44406dfd49ec52dd42e7d3cc160813dcf02fa0304803",
-  "response_table_fingerprint": "348e16d50dabcd27257c",
+  "surrogate_fingerprint": "8fdddf09f0307c9a2aba",
+  "surrogate_artifact_sha256": "9dccada29feac7fd2e3ba18e039bc122a729535d0ed420627612432a8ba6471a",
+  "response_table_fingerprint": "66f64149a60a68b74ba0",
   "surrogate_format_version": 3,
   "transport_uncertainties": [
     "PASSENGER_DEMAND_GROWTH",
@@ -31,8 +31,8 @@
   ],
   "physical_domain": {
     "PASSENGER_DEMAND_GROWTH": {
-      "minimum": 0.0,
-      "maximum": 0.251,
+      "minimum": -0.2,
+      "maximum": 0.5,
       "nominal": 0.0
     },
     "PT_ASC_SHIFT": {

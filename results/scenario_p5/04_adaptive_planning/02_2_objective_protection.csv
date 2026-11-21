@@ -1,0 +1,5 @@
+﻿requirement,first_failure_year,failure_years,assessment_start,assessment_end
+1: bike_share > 0.12,20.0,12,20,40
+2: bike_share_trips > 0.2,,0,20,40
+3: bike_trips > 26467,20.0,14,20,40
+4: bike_dist_km > 100671,20.0,13,20,40

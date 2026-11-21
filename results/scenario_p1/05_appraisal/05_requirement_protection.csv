@@ -1,0 +1,25 @@
+﻿plan,requirement,scenarios_meeting_requirement_percent,mean_failure_years
+baseline,"bike_share > 0.12, Years 20–40",9.5,12.14
+static1,"bike_share > 0.12, Years 20–40",18.0,10.38
+static2,"bike_share > 0.12, Years 20–40",22.0,9.54
+staged1,"bike_share > 0.12, Years 20–40",22.0,9.54
+staged2,"bike_share > 0.12, Years 20–40",22.0,9.54
+flexible,"bike_share > 0.12, Years 20–40",9.5,12.14
+baseline,"bike_share_trips > 0.2, Years 20–40",53.5,7.17
+static1,"bike_share_trips > 0.2, Years 20–40",68.0,4.94
+static2,"bike_share_trips > 0.2, Years 20–40",72.5,4.28
+staged1,"bike_share_trips > 0.2, Years 20–40",72.5,4.28
+staged2,"bike_share_trips > 0.2, Years 20–40",72.5,4.28
+flexible,"bike_share_trips > 0.2, Years 20–40",53.5,7.17
+baseline,"bike_trips > 25459, Years 20–40",3.5000000000000004,15.39
+static1,"bike_trips > 25459, Years 20–40",9.0,13.85
+static2,"bike_trips > 25459, Years 20–40",10.0,13.205
+staged1,"bike_trips > 25459, Years 20–40",10.0,13.205
+staged2,"bike_trips > 25459, Years 20–40",10.0,13.205
+flexible,"bike_trips > 25459, Years 20–40",3.5000000000000004,15.39
+baseline,"bike_dist_km > 96836, Years 20–40",3.0,15.04
+static1,"bike_dist_km > 96836, Years 20–40",5.0,14.115
+static2,"bike_dist_km > 96836, Years 20–40",6.5,13.63
+staged1,"bike_dist_km > 96836, Years 20–40",6.5,13.63
+staged2,"bike_dist_km > 96836, Years 20–40",6.5,13.63
+flexible,"bike_dist_km > 96836, Years 20–40",3.0,15.04

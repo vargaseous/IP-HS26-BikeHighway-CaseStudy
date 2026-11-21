@@ -1,0 +1,265 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue}
+
+\lstset{basicstyle=\ttfamily\small,breaklines=true,frame=single,columns=fullflexible}
+
+\title{Bug \& Findings Report\\[2pt]\large Limmattal Bike Highway Case Study (IP-HS26)}
+\author{Anouk Presotto, Benedetta Golini, Joshua Vargas, Vincent Jonsson}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Scope}
+This report documents the issues found while auditing the saved results of
+Notebooks 02--05 (system model, uncertainty, adaptive planning, appraisal),
+the configuration changes agreed to fix them, the root-cause analysis, the
+full history of the cycling-distance requirement, and the verified outcomes of
+the final end-to-end re-runs (NB02--NB05 executed top-to-bottom with zero error
+cells, Python 3.11.17 in a \texttt{uv}-managed environment on 2026-11-19/20;
+the report itself compiled with Tectonic 0.17.0 on Windows). All numbers in
+\S7--\S8 come from the freshly regenerated outputs in \texttt{results/} and
+\texttt{figures/}.
+
+\section{Configuration changes agreed}
+\begin{enumerate}
+  \item \textbf{Three bike-centric performance requirements, all gated at Year 20.}
+        The final agreed set, in \texttt{notebooks/04\_adaptive\_planning.ipynb} cell~6
+        (\texttt{PERFORMANCE\_REQUIREMENTS}), is:
+        \begin{center}
+        \small\ttfamily
+        bike\_share ${>}$ 0.12,\quad bike\_share\_trips ${>}$ 0.20,\\
+        bike\_dist\_km ${>}$ 100\,000,\quad all with start\_year = 20 (Years 20--40).
+        \end{center}
+        Exported to \texttt{results/04\_adaptive\_planning/}\allowbreak
+        \texttt{04\_performance\_requirements.csv} and handed over to NB05 in
+        \texttt{results/05\_appraisal/05\_performance\_requirements.csv}.
+        \S5 documents why the distance threshold went 150k $\to$ 200k $\to$ 150k
+        $\to$ 100k.
+  \item \textbf{Invalid corridor zone removed.} \texttt{code/parameters.py}
+        \texttt{PROJECT\_ZONES["Zurich\_S18\_Alignment"]} contained zone
+        \texttt{25101005}, which does not exist in
+        \texttt{data/transport/prepared/zones.parquet} (raised
+        \texttt{ValueError: Unknown corridor zones}). Removed (111\,$\to$\,110 valid zones).
+  \item \textbf{Dedicated detailed-network cache.}
+        \texttt{DETAILED\_NETWORK\_FILE} set to
+        \texttt{data/processed/}\allowbreak\texttt{bike\_highway\_detailed\_network.pkl}
+        so the bike-highway corridor does not reuse the legacy MehrSpur cache, which is
+        rejected with \textit{``Detailed network belongs to a different corridor''}.
+        The network itself was rebuilt from OpenStreetMap via OSMnx.
+  \item \textbf{Overpass API reliability fix.} In \texttt{code/transport\_model\_interface.py}
+        the OSMnx settings now carry \texttt{http\_user\_agent} and
+        \texttt{requests\_kwargs} headers
+        \texttt{"IP-HS26-case-study/1.0 (ETH Zurich course exercise)"} and
+        \texttt{overpass\_rate\_limit = False}, fixing the 502/429 failures from
+        \texttt{overpass-api.de}.
+  \item \textbf{Rebuild flags used for the full re-run:}
+        \texttt{force\_regenerate\_corridor\_network = True} in NB02 and
+        \texttt{REBUILD\_TRANSPORT\_SURROGATE = True} /
+        \texttt{REFRESH\_RESPONSE\_TABLE = True} in NB03, because the saved GP
+        surrogate fingerprint no longer matched the current configuration.
+        After the artifacts were rebuilt, both flags were reset to \texttt{False}
+        so later sessions load the saved files (NB02\,=\,34/34 cells OK;
+        NB03\,=\,51/51 cells OK).
+\end{enumerate}
+
+\section{Bugs and root causes}
+
+\subsection{\texttt{start\_year} silently defaults to 1 on the NB04$\to$NB05 handover (real bug --- fixed and verified)}
+NB05's import cell loads \texttt{04\_performance\_requirements.csv} and converts NaN to
+None, then strips None-valued keys:
+\begin{lstlisting}
+rule = {k: v for k, v in definition.items() if v is not None ...}
+value = float(rule.get("start_year", 1))   # missing key -> silently 1
+\end{lstlisting}
+The Nov-14 CSV had an empty \texttt{start\_year} for \texttt{bike\_dist\_km}, so the
+requirement was evaluated over Years 1--40 instead of 20--40, producing
+\texttt{first\_failure\_year = 1} and up to 40 failure years in
+\texttt{05\_requirement\_outcomes.csv} while the other requirements correctly started
+at Year~20 (visible in commit \texttt{0a6fcf1}: \texttt{bike\_dist\_km,>,200000.0,1}).
+NB04 fails loudly on the same input; NB05 fails silently.
+\textbf{Fix applied:} \texttt{start\_year=20} is now explicit in NB04 cell~6 and in both
+exported CSVs. \textbf{Verified after every re-run:} all 1200 rows of the fresh
+\texttt{05\_requirement\_outcomes.csv} have \texttt{first\_failure\_year = 20}
+(no row equals 1), and failure counts are capped at the 21-year window
+(Years 20--40). \textbf{Recommended code fix (not applied, notebooks are course material):}
+\texttt{fillna} with an explicit default plus a \texttt{warnings.warn} when the default
+fires, in NB05's import cell (and harden NB04 cell~6).
+
+\subsection{Extreme OD-delay values and \texttt{od\_passed=False} (model artifact + strict gate)}
+\texttt{local\_od\_delay\_min} is the shortest-path travel-time difference in
+minutes. BPR link times are clipped at 500~min per link
+(\texttt{np.clip(free\_flow*(1+alpha*ratio**beta), 1e-4, 500.0)},
+\texttt{transport\_model\_interface.py:2253}); with v/c $\gtrsim 4.4$ a link saturates the
+clip, and paths crossing several such links sum to the observed maximum of
+$\approx$2{,}850--2{,}907~min (1.4\% of OD cells $>$ 1{,}000~min). These are
+congestion-extrapolation artifacts of the heavily loaded assignment, not a units bug.
+Separately, the GP surrogate misses its own accuracy gate in
+\texttt{03\_surrogate\_validation.json}: OD weighted MAE 1.06~min and weighted RMSE
+3.78~min vs.\ limits 0.1/0.2~min (\texttt{OD\_ERROR\_LIMITS},
+\texttt{build\_transport\_surrogate.py:102}), so \texttt{validation.od.passed = False}
+(warning only; appraisal-level paired checks all pass: mode-share errors ${<}\,0.3$~pp,
+\texttt{paired\_appraisal.passed = True}). \textbf{Suggested fix:} cap OD delay at a
+physically sane ceiling (e.g.\ 60--120~min) before GP training, or train on log-delay.
+\textbf{Deliberately not changed:} the validation JSON stores SHA-256 hashes of functions
+in \texttt{transport\_model\_interface.py}; editing that file would invalidate the
+surrogate fingerprint and force a multi-hour GP rebuild.
+
+\subsection{NPV magnitude (internally consistent; parameter justification needed)}
+Fresh mean NPVs are $+$576 to $+$860~MCHF for the build plans vs.\ discounted capex
+of $\approx$42--52~MCHF (flexible $\approx$2~MCHF, only when triggers fire).
+The arithmetic reconciles exactly (NPV components sum to \texttt{NPV\_MCHF} to
+1e-11), and the large benefit/capex ratio follows from
+\texttt{C\_TT\_BIKE = 35}\,CHF/h applied to $\approx$77M annual bike trips.
+Not a bug, but the VOT/health parameters should be justified in the main report.
+
+\subsection{Empty / NaN exports (by design or knock-on)}
+\begin{itemize}
+  \item \texttt{05\_waiting\_selected\_*.csv} and \texttt{05\_waiting\_matching\_scenarios.csv}
+        (0 rows): the waiting-value filter needs scenarios where the flexible plan avoids a
+        failure the build plans incur. With requirement~3 failing in $\geq$99\% of runs at
+        100k (100\% at 150k), almost no scenario qualifies. Knock-on of the saturated
+        distance requirement, not a code bug. The sibling tables
+        \texttt{05\_waiting\_summary.csv} (2 comparators) and
+        \texttt{05\_waiting\_paired\_differences.csv} (400 rows) do populate.
+  \item \texttt{03\_parcoords\_violin\_fixed\_year40.csv} (0 rows): by design
+        (no constant Year-40 objectives).
+  \item \texttt{05\_interpretation.csv}: unfilled \texttt{INTERPRETATION\_NOTES}
+        template placeholder.
+  \item \texttt{05\_gp\_appraisal\_components.csv}: \texttt{passed=NaN} for components
+        with mean $|\text{actual}| < 5\times10^6$~CHF/yr --- intentional
+        ``not material'' sentinel.
+  \item \texttt{04\_4\_restoration\_summary.csv} has empty columns and
+        \texttt{04\_2\_failure\_drivers.png}, \texttt{05\_prim\_tradeoff.png},
+        \texttt{05\_6\_value\_and\_price\_of\_waiting.png} are not rewritten:
+        sections are skipped when no restoration window / degenerate regime applies.
+\end{itemize}
+
+\subsection{Sentinel \texttt{0} vs NaN for ``not opened'' (documented, cosmetic)}
+\texttt{opening == 0} is the documented ``unscheduled'' sentinel of the vectorized
+path: \texttt{advance\_trigger}'s docstring says ``zero means unscheduled'', and all
+consumers use \texttt{opening == 0} / \texttt{> 0} consistently
+(\texttt{adaptive\_planning.py:256,261,292}). Not a logic bug; cosmetic encoding wart.
+
+\section{Checked and found OK}
+\begin{itemize}
+  \item Modal shares sum to exactly 1.0 in every row; car+pt+bike+walk = total trips.
+  \item Year domains respected (years 1--40, calendar 2026--2065); fan-chart
+        percentiles monotonic; operating-state percentages sum to 100\%.
+  \item CO$_2$ $\leftrightarrow$ vehicle-km $\leftrightarrow$ emission factor
+        (0.139 $\to$ 0.050 kg/km) reconcile exactly.
+  \item NB02 Section 1.7 headline numbers internally consistent: Year-1 peak trips
+        224{,}570 (car 22.5\%, PT 26.5\%, bike 17.1\%, walk 33.9\%); Year-40 total
+        269{,}484 = exactly +20\% (\texttt{PASSENGER\_DEMAND\_GROWTH\_Y40}).
+  \item \texttt{congestion\_delay\_hours} up to $\approx$3.7e6 is person-hours/year
+        (per \texttt{04\_indicator\_catalog.csv}), not minutes/link --- consistent with
+        the OD-delay artifact in \S3.2.
+\end{itemize}
+
+\section{History of the \texttt{bike\_dist\_km} requirement (git archaeology)}
+\texttt{bike\_dist\_km} was introduced by this group on 2026-11-08 (commit
+\texttt{8f041e3} ``Bike centric requirements''); the upstream course default is
+\texttt{pt\_share > 0.35}. Every value it ever had in the notebooks/CSVs:
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lllp{2.2cm}>{\raggedright\arraybackslash}p{4.6cm}@{}}
+\toprule
+Date & Commit & Threshold & start\_year & Comment \\
+\midrule
+2026-11-02 & \texttt{67636db} & --- & --- & NB04 first attempt; only bike\_share\_trips ${>}$0.20 (yr 20) \\
+2026-11-08 & \texttt{8f041e3} & 150{,}000 & \emph{empty} & first appearance; empty start\_year $\Rightarrow$ silent year-1 bug; shares 0.10/0.17 \\
+2026-11-14 & \texttt{d643a21} & 200{,}000 & \emph{empty} & raised; shares 0.12/0.20; NB05 CSV got Years 1--40 \\
+2026-11-15 & \texttt{0a6fcf1} & 200{,}000 & 1 (bug) & NB05 attempt exposes ``Years 1--40'' label \\
+2026-11-19 & \texttt{129437b} & 150{,}000 & 20 & ``Adjusted''; start\_year fixed \\
+2026-11-20 & (this session) & 100{,}000 & 20 & relaxed to a satisfiable level; see \S7 \\
+\bottomrule
+\end{tabular}
+\caption{Complete threshold history from \texttt{git log -S} pickaxe over all refs.}
+\end{table}
+
+The archived threshold sweep (configs A--D in the reinvestigation folder) had already
+shown that any distance threshold above $\approx$150k is missed by almost all scenarios,
+because \texttt{bike\_dist\_km} is an absolute \emph{per-peak-hour} stock, while the
+group's original Stage-2 trigger concept was \emph{relative} (+77.7\% bicycle Pkm,
+the second-highest national scenario, per the group report).
+
+\section{Re-run procedure and verification (2026-11-19/20)}
+All via \texttt{uv} (uv 0.13.1, Python 3.11.17), never system Python:
+\begin{enumerate}
+  \item \texttt{uv run python code/validate\_case\_study.py} $\Rightarrow$ PASS
+        (surrogate\_status=ready, response\_table\_status=ready, artifacts\_ready=true).
+  \item NB04 then NB05 executed with
+        \texttt{uv run jupyter nbconvert --to notebook --execute --inplace}
+        (\texttt{--ExecutePreprocessor.timeout=10800}):
+        \begin{itemize}
+          \item 2026-11-19 18:18--18:22 CET: 2-requirement run (bike\_share\_trips, bike\_dist\_km 150k) --- NB04 109~s, NB05 83~s;
+          \item 2026-11-19 22:29--22:32 CET: 3-requirement run (150k) after re-adding bike\_share $>$ 0.12 --- NB04 75~s, NB05 86~s;
+          \item 2026-11-20 07:18--07:20 CET: final run with bike\_dist\_km $>$ 100k --- NB04 68~s (36/36 cells), NB05 75~s (27/27 cells);
+        \end{itemize}
+        zero error outputs in every run.
+  \item Acceptance checks (\texttt{cache/verify\_*.py}): requirement CSVs carry all
+        three rules with \texttt{start\_year=20}; every \texttt{first\_failure\_year}=20;
+        failure windows $\leq 21$ years; figures in \texttt{figures/04|05} regenerated.
+\end{enumerate}
+
+\section{Final results with \texttt{bike\_dist\_km > 100\,000} (2026-11-20 run)}
+200 scenarios $\times$ 6 plans = 1200 rows in \texttt{05\_requirement\_outcomes.csv}.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Requirement (Years 20--40) & Failed in & Mean failing years & First failure year \\
+\midrule
+bike\_share ${>}$ 0.12          & 82.2\% & 10.55 & always 20 \\
+bike\_share\_trips ${>}$ 0.20   & 34.8\% & 5.27  & always 20 \\
+bike\_dist\_km ${>}$ 100{,}000 & 99.3\% & 15.52 & always 20 \\
+\bottomrule
+\end{tabular}
+\caption{Per-requirement outcomes (all plans pooled).}
+\end{table}
+
+\begin{itemize}
+  \item \textbf{Distance requirement now differentiates plans:} at 100k it still fails in
+        99--100\% of scenarios (baseline/flexible 200/200; build plans 198/200), but the
+        failing window shrinks from 21 years (150k) to $\approx$15 years mean, and build
+        plans pass it in 2 scenarios where baseline/flexible never do. 26.1\% of all
+        Year$\geq$20 trajectory rows exceed 100k (vs.\ 0.13\% above 150k).
+  \item \textbf{All-requirements-met is now non-zero:} static1/static2/staged1/staged2 meet
+        all three requirements in all Years 20--40 in 2/200 scenarios each (1\%);
+        baseline and flexible in 0/200. Acceptable-year share rises to 59.2\% (baseline/
+        flexible) and 61.3--62.5\% (build plans) vs.\ 47.5\% at 150k.
+  \item PRIM analyses un-degenerate: 10/10 NB04 and 9/10 NB05 PRIM peeling/bounds CSVs
+        are freshly written again (they were skipped at 150k).
+  \item \textbf{NPV unchanged (MCHF vs.\ baseline):} Static2 $+$860, Staged2 $+$650,
+        Staged1 $+$648, Static1 $+$576 (100\% positive each); Flexible $-2.0$ (0\%
+        positive). Joint ``positive NPV \emph{and} requirements met'': 1\% for each
+        build plan, 0\% for baseline/flexible.
+  \item \textbf{Waiting value:} flexible saves $\approx$41--50~MCHF discounted expenditure
+        vs.\ staged1/static2 but with NPV lower by $\approx$650--862~MCHF and
+        $+$1.32 extra failure years on average --- waiting is not worth it under these
+        requirements; \texttt{05\_waiting\_summary.csv} now populates (2 comparators),
+        while the \texttt{05\_waiting\_selected\_*} row filters remain empty
+        ($\S3.4$).
+\end{itemize}
+
+\section{Stale artifacts --- resolved}
+The figures that previously showed the 200k Years-1--40 requirement failing everywhere
+were all regenerated across the Nov-19/20 re-runs and now reflect the three
+year-20-gated requirements (150k run at 22:30, then 100k run at 07:19). NB03 figures
+remain from 2026-10-20 by design: its surrogate artifacts were rebuilt 2026-11-19
+18:00 and NB03 loads them with \texttt{REBUILD/REFRESH = False}, so its tables are
+consistent with the current model.
+
+\end{document}

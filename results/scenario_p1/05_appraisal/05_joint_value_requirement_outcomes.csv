@@ -1,0 +1,7 @@
+﻿plan,Positive NPV and requirements met,Positive NPV only,Requirements met only,Neither
+baseline,0.0,0.0,3.0,97.0
+static1,5.0,95.0,0.0,0.0
+static2,6.5,93.5,0.0,0.0
+staged1,6.5,93.5,0.0,0.0
+staged2,6.5,93.5,0.0,0.0
+flexible,0.0,0.0,3.0,97.0

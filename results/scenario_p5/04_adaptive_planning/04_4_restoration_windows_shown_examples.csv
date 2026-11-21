@@ -1,0 +1,20 @@
+﻿scenario,source_state,target_state,package,transition,window_number,opening_window_start,opening_window_end,restorable_years,construction_years,decision_by_window_start,last_restoration_decision_year,earliest_rule_decision_year,earliest_rule_opening_year,reachable_from_new_monitoring,whole_window_reachable,continues_to_horizon
+119,0,1,1,Stage 0 – Baseline Network → Stage 1 – Bike Highway Zürich-Schlieren,1,20,20,1,10,10,10,3,13,True,True,False
+159,0,1,1,Stage 0 – Baseline Network → Stage 1 – Bike Highway Zürich-Schlieren,1,24,25,2,10,14,15,3,13,True,True,False
+161,0,1,1,Stage 0 – Baseline Network → Stage 1 – Bike Highway Zürich-Schlieren,1,29,32,4,10,19,22,3,13,True,True,False
+122,0,1,1,Stage 0 – Baseline Network → Stage 1 – Bike Highway Zürich-Schlieren,1,33,36,4,10,23,26,3,13,True,True,False
+51,0,1,1,Stage 0 – Baseline Network → Stage 1 – Bike Highway Zürich-Schlieren,1,34,37,4,10,24,27,3,13,True,True,False
+119,0,2,2,Stage 0 – Baseline Network → Stage 2 - Additional underpasses,1,20,20,1,10,10,10,3,13,True,True,False
+159,0,2,2,Stage 0 – Baseline Network → Stage 2 - Additional underpasses,1,25,25,1,10,15,15,3,13,True,True,False
+161,0,2,2,Stage 0 – Baseline Network → Stage 2 - Additional underpasses,1,31,32,2,10,21,22,3,13,True,True,False
+122,0,2,2,Stage 0 – Baseline Network → Stage 2 - Additional underpasses,1,35,36,2,10,25,26,3,13,True,True,False
+51,0,2,2,Stage 0 – Baseline Network → Stage 2 - Additional underpasses,1,36,37,2,10,26,27,3,13,True,True,False
+161,1,3,2,Stage 1 – Bike Highway Zürich-Schlieren → Both stages,1,28,28,1,10,18,18,3,13,True,True,False
+122,1,3,2,Stage 1 – Bike Highway Zürich-Schlieren → Both stages,1,31,32,2,10,21,22,3,13,True,True,False
+51,1,3,2,Stage 1 – Bike Highway Zürich-Schlieren → Both stages,1,33,33,1,10,23,23,3,13,True,True,False
+24,1,3,2,Stage 1 – Bike Highway Zürich-Schlieren → Both stages,1,40,40,1,10,30,30,3,13,True,True,True
+159,2,3,1,Stage 2 - Additional underpasses → Both stages,1,24,24,1,10,14,14,3,13,True,True,False
+161,2,3,1,Stage 2 - Additional underpasses → Both stages,1,28,30,3,10,18,20,3,13,True,True,False
+122,2,3,1,Stage 2 - Additional underpasses → Both stages,1,31,34,4,10,21,24,3,13,True,True,False
+51,2,3,1,Stage 2 - Additional underpasses → Both stages,1,33,35,3,10,23,25,3,13,True,True,False
+24,2,3,1,Stage 2 - Additional underpasses → Both stages,1,40,40,1,10,30,30,3,13,True,True,True

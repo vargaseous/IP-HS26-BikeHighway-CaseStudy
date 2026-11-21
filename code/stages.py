@@ -182,9 +182,9 @@ PACKAGES = {
         "bike_highways": [
                    {
                         "od_pairs": BIKE_HIGHWAY_OD_PAIRS,
-                        "both_directions": False,
+                        "both_directions": True,
                         "min_distance_km": 0.0,
-                        "max_distance_km": 1000.0,
+                        "max_distance_km": 15.0,
                         "effects": {
                             "distance_reduction_pct": 5.0,
                             "speed_increase_pct": 100 * (16 / 13 - 1)
@@ -216,9 +216,9 @@ PACKAGES = {
         "bike_highways": [
             {
                 "od_pairs": BIKE_HIGHWAY_OD_PAIRS,
-                "both_directions": False,
+                "both_directions": True,
                 "min_distance_km": 0.0,
-                "max_distance_km": 1000.0,
+                "max_distance_km": 15.0,
                 "effects": {
                     "speed_increase_pct": 100 * (18 / 16 - 1)
                                        }
