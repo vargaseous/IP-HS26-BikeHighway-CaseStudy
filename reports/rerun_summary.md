@@ -1,3 +1,29 @@
+# Rerun summary — 2026-11-24 (current parameter settings, Windows machine, uv environment)
+
+## Live settings (verified from code + notebooks on 2026-11-24)
+- `OPEX_RATE = 0.04` (KPMG Swiss opex analysis, rounded up from 0.3x%); `DISCOUNT_RATE = 0.04` (early-capex stress); `C_TT_BIKE = 18.7` CHF/h (was 35.0); health benefit 1.306 CHF/pkm (Kanton Zürich 2017) unchanged
+- `PASSENGER_DEMAND_GROWTH` uncertainty reverted to upstream [-0.20, +0.50]
+- Stage scope: both directions, max 15 km; staged1 = Y8/Y15, staged2 = Y6/Y25
+- NB04 triggers: T1 = 18,070 (+5% of Year-1 bike_trips 17,212), T2 = 25,820 (+50%), persistence 3/3, lead 5/3
+- Requirements (Years 20–40): bike_share > 0.12, bike_share_trips > 0.20, bike_dist_km > 50,000
+- NB05 parcoord axes: NPV, acceptable years, Year-40 cycling share / person-hours / cumulative distance, expenditure (PT axis swapped out)
+- NB05 `USE_CACHED_DATASET = False` left set so valuation changes always rebuild the appraisal
+- Latest full run snapshot: `results/scenario_ctt_bike_18_7/` (+ `figures/scenario_ctt_bike_18_7/`), incl. the 40-frame NPV lifecycle PNG sequence (`figures/scenario_ctt_bike_18_7/npv_lifecycle_seq/`, generator: `helpers/make_npv_lifecycle_seq.py`)
+
+## Run history / variants
+| folder | what changed |
+|---|---|
+| scenario_base, scenario_p1/p5/p10 | dist requirement 100k / +1/+5/+10% of Y40 medians |
+| scenario_triggers | triggers +20%/+50% (20,650/25,820) |
+| scenario_trig5_dist50k, scenario_trig5_nodist | triggers +5%/+50%, dist>50k vs removed (identical — 50k never binding) |
+| scenario_econstress | OPEX 4% + discount 4% (flexible first negative-NPV tail: 9%) |
+| scenario_staged25 | staged tunnels Y15/Y25 (live now) |
+| scenario_ctt_bike_18_7 | C_TT_BIKE 18.7 (live now) |
+| econ_base/capex2/disc4/health0/health2 | synthetic NB05-only appraisal variants (capex2 inconclusive — cache) |
+
+
+----
+
 # End-to-end rerun summary — 2026-11-19/20 (Windows machine, uv environment)
 
 Continuation of `IP_HS26_Reinvestigation/STATE.md` (reinvestigation handoff, macOS).

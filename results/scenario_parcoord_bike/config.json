@@ -1,0 +1,5 @@
+{
+ "tag": "scenario_parcoord_bike",
+ "timestamp": "2026-11-21T15:12:57",
+ "note": "NB05 parcoord axes swapped: delta_final_pt_share_pp -> delta_final_bike_share_pp / delta_final_bike_tt_hours / delta_cumulative_bike_dist_km (NB04-equivalent cycling axes)"
+}

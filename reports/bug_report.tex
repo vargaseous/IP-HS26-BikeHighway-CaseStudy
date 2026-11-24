@@ -262,4 +262,8 @@ remain from 2026-10-20 by design: its surrogate artifacts were rebuilt 2026-11-1
 18:00 and NB03 loads them with \texttt{REBUILD/REFRESH = False}, so its tables are
 consistent with the current model.
 
+
+\section*{Appendix --- current settings as of 2026-11-24 (APPENDIX-CURRENT-SETTINGS)}
+Live values in \texttt{code/parameters.py}, \texttt{code/adaptive\_planning.py} and notebook cells: OPEX\_RATE = 0.04 (KPMG Swiss opex, rounded up from 0.3x\%), DISCOUNT\_RATE = 0.04 (early-capex stress), C\_TT\_BIKE = 18.7 CHF/h, BENEFIT\_HEALTH\_BIKE\_PER\_KM = 1.306 (Kanton Z\"urich 2017), C\_FLEX = 1{,}000{,}000 CHF, PASSENGER\_DEMAND\_GROWTH uncertainty reverted to upstream $[-0.20, 0.50]$. Stage scope: both directions, max 15\,km. Staged plans: staged1 = Y8/Y15, staged2 = Y6/Y25. NB04 triggers: T1 = 18{,}070 (+5\% of Year-1 bike\_trips 17{,}212), T2 = 25{,}820 (+50\%), persistence 3/3, lead 5/3. Requirements: bike\_share${>}$0.12, bike\_share\_trips${>}$0.20, bike\_dist\_km${>}$50{,}000, Years 20--40. NB05 parcoord axes swapped from PT share to the three cycling delta axes. Latest run snapshot: \texttt{results/scenario\_ctt\_bike\_18\_7/}.
+
 \end{document}
